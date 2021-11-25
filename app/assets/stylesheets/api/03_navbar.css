@@ -1,0 +1,87 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.logo img {
+  width: 60px;
+  height: 43px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+
+.sessionButtons {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.sessionButtons button {
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 50px;
+  margin: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  font-weight: 300;
+  height: 34px;
+  width: 54px;
+  border-radius: 0.1875rem;
+}
+
+#signup-button {
+  border: 0.0625rem solid #247f9e;
+  background-color: #247f9e;
+  color: #fff;
+  margin-right: 15px;
+}
+
+#signup-button:hover {
+  background-color: #1f6880;
+}
+
+#login-button {
+  border: 0.0625rem solid #d8d9db;
+  color: black;
+}
+
+#login-button:hover {
+  background-color: #d8d9db;
+}
+
+#logout-spacer {
+  margin-top: 20px;
+  margin-right: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  font-weight: 300;
+  height: 34px;
+  width: 54px;
+}
+
+#logout-button {
+  border: 0.0625rem solid #d8d9db;
+  color: black;
+}
+
+#logout-button:hover {
+  background-color: #d8d9db;
+}
