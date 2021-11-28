@@ -7,6 +7,7 @@ import SignupFormContainer from "./session_form/signup_form_container";
 import Footer from "./footer";
 import ModalContainer from "./modal/modal_container";
 import SearchBanner from "./search_banner";
+import RestaurantIndexContainer from "./restaurants/restaurant_index_container";
 
 
 const App = () => (
@@ -17,6 +18,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <Route exact path="/" component={RestaurantIndexContainer} />
     </Switch>
     <Footer />
   </div>
