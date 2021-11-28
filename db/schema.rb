@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_24_082322) do
+ActiveRecord::Schema.define(version: 2021_11_28_052505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,22 @@ ActiveRecord::Schema.define(version: 2021_11_24_082322) do
     t.string "checksum", null: false
     t.datetime "created_at", null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name", null: false
+    t.text "description", null: false
+    t.string "price", null: false
+    t.string "neighborhood", null: false
+    t.string "primary_tag", null: false
+    t.string "secondary_tag"
+    t.string "tertiary_tag"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_restaurants_on_name", unique: true
+    t.index ["primary_tag"], name: "index_restaurants_on_primary_tag"
+    t.index ["secondary_tag"], name: "index_restaurants_on_secondary_tag"
+    t.index ["tertiary_tag"], name: "index_restaurants_on_tertiary_tag"
   end
 
   create_table "users", force: :cascade do |t|
