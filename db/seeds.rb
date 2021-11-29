@@ -8,6 +8,10 @@
 
 require 'open-uri'
 
+Restaurant.destroy_all
+User.destroy_all
+
+
 users = User.create([{ first_name: "Guest", last_name: "User", email: 'demo@gmail.com', password: 'demo1234' }])
 
 restaurant1 = Restaurant.create!(
