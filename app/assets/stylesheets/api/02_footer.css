@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
-  position:absolute;
+  position: relative;
   background-color: #2D333F;
   left:0;
   bottom:0;

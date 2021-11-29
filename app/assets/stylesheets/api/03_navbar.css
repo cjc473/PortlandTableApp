@@ -30,6 +30,9 @@
   justify-content: center;
   align-items: center;
   margin-top: 15px;
+  margin-right: 50px;
+  height: 54px;
+  width: 169px;
 }
 
 .sessionButtons button {
