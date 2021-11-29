@@ -6,9 +6,10 @@ class RestaurantShow extends React.Component {
   }
 
   render() {
+    const { restaurant } = this.props
     return (
       <div>
-        <h1>this is a show page!</h1>
+        <h1>this is a show page for {restaurant.name}!</h1>
       </div>
     )
   }
