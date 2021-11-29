@@ -9,7 +9,7 @@ class RestaurantIndexItem extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="homepage-restaurant">
         this is a restaurant!
       </div>
     )
