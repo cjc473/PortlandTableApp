@@ -109,3 +109,25 @@ restaurant10 = Restaurant.create!(
   secondary_tag: "Beer",
   tertiary_tag: "Patio"
 )
+
+restIcon1 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest1_icon.jpg')
+restIcon2 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest2_icon.jpg')
+restIcon3 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest3_icon.jpg')
+restIcon4 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest4_icon.jpg')
+restIcon5 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest5_icon.jpg')
+restIcon6 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest6_icon.jpg')
+restIcon7 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest7_icon.jpg')
+restIcon8 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest8_icon.jpg')
+restIcon9 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest9_icon.jpg')
+restIcon10 = URI.open('https://portlandtable.s3.us-west-2.amazonaws.com/restaurant-icons/rest10_icon.jpg')
+
+restaurant1.photo.attach(io: restIcon1, filename: 'rest1_icon.jpg')
+restaurant2.photo.attach(io: restIcon2, filename: 'rest2_icon.jpg')
+restaurant3.photo.attach(io: restIcon3, filename: 'rest3_icon.jpg')
+restaurant4.photo.attach(io: restIcon4, filename: 'rest4_icon.jpg')
+restaurant5.photo.attach(io: restIcon5, filename: 'rest5_icon.jpg')
+restaurant6.photo.attach(io: restIcon6, filename: 'rest6_icon.jpg')
+restaurant7.photo.attach(io: restIcon7, filename: 'rest7_icon.jpg')
+restaurant8.photo.attach(io: restIcon8, filename: 'rest8_icon.jpg')
+restaurant9.photo.attach(io: restIcon9, filename: 'rest9_icon.jpg')
+restaurant10.photo.attach(io: restIcon10, filename: 'rest10_icon.jpg')

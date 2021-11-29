@@ -16,5 +16,7 @@
 class Restaurant < ApplicationRecord
 
   validates :name, :description, :price, :neighborhood, :primary_tag, presence: true
+
+  has_one_attached :photo
   
 end

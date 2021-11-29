@@ -24,6 +24,7 @@ class RestaurantIndex extends React.Component {
               <RestaurantIndexItem restaurant={restaurant} key={restaurant.id} />
             ))}
           </ul>
+          
         </div>
         <div className="homepage-restaurant-header-container">
           <h2 className="homepage-restaurant-header">Outdoor dining</h2>
