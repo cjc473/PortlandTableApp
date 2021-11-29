@@ -1,9 +1,10 @@
 .homepage-restaurants-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   margin-top: 20px;
-  margin-left: 50px;
+  margin-bottom: 70px;
   height: 100%;
   width: 100%;
   
@@ -14,6 +15,7 @@
   flex-direction: column;
   justify-content: center;
   margin-top: 30px;
+  margin-bottom: 30px;
   height: 100%;
   width: 1100px;
 }
@@ -28,15 +30,65 @@
   border-bottom: 1px solid #d8d9db;
 }
 
+.homepage-restaurant-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 8px;
+}
+
 
 .restaurant-card {
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  height: 280px;
+  border: 1px solid #d8d9db;
+  border-radius: 5px;
+}
 
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 2px rgb(181, 180, 180);
 }
 
 .card-name {
-
+  margin: 12px 12px 6px 12px;
 }
 
 .card-details {
+  margin: 6px 12px 6px 12px;
   font-size: 14px;
+}
+
+.icon-pic {
+  width: 256px;
+  height: 144px;
+}
+
+.card-reservations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 6px 12px 12px 12px;
+}
+
+.card-res-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 32px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(218, 55, 67);
+  border: 1px solid rgb(184, 34, 45);
+  color: #FFF
+}
+
+.card-res-time:hover {
+  background-color: rgb(142, 37, 44);
+  border: 1px solid rgb(122, 35, 39)
 }

@@ -14,7 +14,7 @@ class RestaurantIndex extends React.Component {
     const {restaurants} = this.props;
     let restDinner = restaurants.slice(0, 4);
     let restOutdoor = restaurants.slice(4, 8);
-    let restNew = restaurants.slice(8)
+    let restNew = restaurants.slice(6)
     return (
       <div className="homepage-restaurants-container">
         <div className="homepage-restaurant-header-container">
