@@ -8,9 +8,11 @@ class RestaurantIndexItem extends React.Component {
   }
 
   render() {
+    const { restaurant } = this.props
     return (
-      <div className="homepage-restaurant-container">
-        
+      <div className="restaurant-card">
+        <h3 className="card-name">{restaurant.name}</h3>
+        <p className="card-details">{restaurant.primary_tag} | {restaurant.price} | {restaurant.neighborhood}</p>
       </div>
     )
   }
