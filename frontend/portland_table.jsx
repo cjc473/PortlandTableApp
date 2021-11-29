@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root"
+import { fetchRestaurants } from "./actions/restaurant_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
 // test
@@ -28,4 +29,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchRestaurants = fetchRestaurants;
 })

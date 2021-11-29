@@ -3,5 +3,3 @@
     json.partial! "api/restaurants/restaurant", restaurant: restaurant
   end
 end
-
-json.partial! "api/users/user", user: @user

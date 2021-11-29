@@ -1,10 +1,11 @@
 import { connect } from "react-redux";
-import React from "react";
+import { restaurantArray } from "../../reducers/selectors";
 import { fetchRestaurants } from "../../actions/restaurant_actions";
 import RestaurantIndex from "./restaurant_index";
 
 const mSTP = state => ({
-  restaurants: Object.values(state.entities.restaurants)
+  // restaurants: Object.values(state.entities.restaurants)
+  restaurants: restaurantArray(state.entities)
 })
 
 const mDTP = dispatch => ({

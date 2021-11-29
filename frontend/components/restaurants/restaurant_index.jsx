@@ -13,6 +13,7 @@ class RestaurantIndex extends React.Component {
   render() {
     const {restaurants} = this.props.restaurants
     console.log(restaurants)
+    console.log(this.props)
     return (
       <div>
         <h1>placeholder restaurants</h1>
