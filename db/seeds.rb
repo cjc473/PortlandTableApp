@@ -8,3 +8,6 @@
 
 
 users = User.create([{ first_name: "Guest", last_name: "User", email: 'demo@gmail.com', password: 'demo1234' }])
+
+
+restaurants = Restaurant.create([{ name: "restaurant1", description: "restaurant1_desc", price: "$$", neighborhood: "laurelhurt", primary_tag: "sushi"}, { name: "restaurant2", description: "restaurant2_desc", price: "$$", neighborhood: "laurelhurt", primary_tag: "mexican"}, { name: "restaurant3", description: "restaurant3_desc", price: "$$", neighborhood: "laurelhurt", primary_tag: "pizza"}, { name: "restaurant4", description: "restaurant4_desc", price: "$$", neighborhood: "laurelhurt", primary_tag: "brunch"}])
