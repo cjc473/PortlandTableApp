@@ -6,8 +6,8 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def show
-    @Restaurant = Restaurant.find(params[:id])
-    render :show
+    @restaurant = Restaurant.find(params[:id])
+    render "api/restaurants/show"
   end
 
   private

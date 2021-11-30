@@ -1,2 +1,2 @@
-json.extract! restaurant, :id, :name, :price, :neighborhood, :primary_tag
+json.extract! restaurant, :id, :name, :description, :price, :neighborhood, :primary_tag, :secondary_tag, :tertiary_tag
 
