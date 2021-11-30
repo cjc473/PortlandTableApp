@@ -5,11 +5,15 @@ class RestaurantShow extends React.Component {
     super(props)
   }
 
+  componentDidMount() {
+    this.props.fetchRestaurant();
+  }
+
   render() {
-    const { restaurant } = this.props
+    if (!(this.props.restaurant)) return null;
     return (
-      <div>
-        <h1>this is a show page for {restaurant.name}!</h1>
+      <div className="showpage-container">
+        <h1>this is a show page for {this.props.restaurant.name}!</h1>
       </div>
     )
   }
