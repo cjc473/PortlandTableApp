@@ -4,9 +4,15 @@ const SearchBanner = () => {
 
   return (
     <div className="banner-container">
-      {/* <h2 className="banner-message">Find your table for any occasion</h2> */}
-      <br />
-      <img className="banner-img" src="https://portlandtable.s3.us-west-2.amazonaws.com/banner+images/banner_img.jpeg" />
+      <h2 className="banner-message">Find your table for any occasion</h2>
+      <div className="search-bar-container">
+        <div>
+          
+        </div>
+        <div>
+          
+        </div>
+      </div>
     </div>
   )
 }
