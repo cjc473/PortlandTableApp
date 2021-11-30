@@ -10,10 +10,16 @@ class RestaurantShow extends React.Component {
   }
 
   render() {
-    if (!(this.props.restaurant)) return null;
+    if (!this.props.restaurant) return null;
+    const { restaurant } = this.props;
+    console.log(restaurant);
     return (
       <div className="showpage-container">
-        <h1>this is a show page for {this.props.restaurant.name}!</h1>
+        <div className="showpage-banner" />
+        <div className="showpage-rest-details">
+          <h1 className="showpage-name">{restaurant.name}</h1>
+          <p>{restaurant.description}</p>
+        </div>
       </div>
     )
   }
