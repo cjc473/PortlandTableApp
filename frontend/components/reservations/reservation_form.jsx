@@ -25,19 +25,19 @@ class ReservationForm extends React.Component {
     return (
       <form className="create-res-form" onSubmit={this.handleSubmit}>
         <h1 id="create-res-header">Make a reservation</h1>
-        <div className="showpage-shadow">
+        <div id="res-form-shadow" className="showpage-shadow">
           <div className="showpage-size-select-container">
             <h2>Party Size</h2>
             <select type="text" className="showpage-size-select">
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
+              <option value="2">For 2</option>
+              <option value="3">For 3</option>
+              <option value="4">For 4</option>
+              <option value="5">For 5</option>
+              <option value="6">For 6</option>
+              <option value="7">For 7</option>
+              <option value="8">For 8</option>
+              <option value="9">For 9</option>
+              <option value="10">For 10</option>
             </select>
           </div>
           <div className="showpage-date-time-container">
@@ -66,7 +66,6 @@ class ReservationForm extends React.Component {
             </div>
           </div>
           <div className="showpage-submit-container">
-            Find a table or Select a time:
             <input type="submit"
               value="Let's go"
               className="create-reservation-submit"
