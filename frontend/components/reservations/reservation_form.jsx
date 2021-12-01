@@ -27,10 +27,11 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.todayDateStr())
     this.props.action(this.state)
   }
 
-  update(e) {
+  update(field) {
     return e => (
       this.setState({ [field]: e.target.value })
     )
@@ -44,7 +45,11 @@ class ReservationForm extends React.Component {
         <div id="res-form-shadow" className="showpage-shadow">
           <div className="showpage-size-select-container">
             <h2>Party Size</h2>
-            <select type="text" className="showpage-size-select">
+            <select type="text" 
+              className="showpage-size-select"
+              value={this.state.party_size}
+              onChange={this.update("party_size")}
+            >
               <option value="2">For 2</option>
               <option value="3">For 3</option>
               <option value="4">For 4</option>
@@ -77,12 +82,12 @@ class ReservationForm extends React.Component {
                 <option value="1130am">11:30 AM</option>
                 <option value="1200pm">12:00 PM</option>
                 <option value="1230pm">12:30 PM</option>
-                <option value="1000am">6:00 PM</option>
-                <option value="1030am">6:30 PM</option>
-                <option value="1100am">7:00 PM</option>
-                <option value="1130am">7:30 PM</option>
-                <option value="1200pm">8:00 PM</option>
-                <option value="1230pm">8:30 PM</option>
+                <option value="600pm">6:00 PM</option>
+                <option value="630pm">6:30 PM</option>
+                <option value="700pm">7:00 PM</option>
+                <option value="730pm">7:30 PM</option>
+                <option value="800pm">8:00 PM</option>
+                <option value="830pm">8:30 PM</option>
               </select>
             </div>
           </div>
