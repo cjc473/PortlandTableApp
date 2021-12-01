@@ -1,12 +1,7 @@
 import React from "react";
 import { FiSearch } from 'react-icons/fi';
 import { FaUtensils } from 'react-icons/fa';
-import { ImSpoonKnife } from 'react-icons/im';
-import { FaRegMoneyBillAlt } from 'react-icons/fa';
-import { VscComment } from 'react-icons/vsc';
-import { BiCommentDetail, BiHomeAlt } from 'react-icons/bi';
-import { CgComment } from 'react-icons/cg';
-import { GoComment } from 'react-icons/go';
+import { BiHomeAlt } from 'react-icons/bi';
 import { BsCashStack } from 'react-icons/Bs'
 
 class RestaurantShow extends React.Component {
