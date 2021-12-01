@@ -3,10 +3,17 @@ import React from "react";
 class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      party_size: 2,
+      date: (this.props.date ? this.props.date : this.todayDateStr()),
+      time: (this.props.time ? this.props.time : "7:00 PM")
+    };
     this.handleSubmit = this.handleSubmit.bind(this)
     this.todayDateStr = this.todayDateStr.bind(this)
+    this.update = this.update.bind(this)
   }
+
+  //restaurant_id and user_id passed in as props
 
   todayDateStr() {
     const todaysDate = new Date();
@@ -18,6 +25,12 @@ class ReservationForm extends React.Component {
 
   handleSubmit() {
     e.preventDefault();
+  }
+
+  update(e) {
+    return e => (
+      this.setState({ [field]: e.target.value })
+    )
   }
 
 
@@ -45,8 +58,8 @@ class ReservationForm extends React.Component {
               <h2>Date</h2>
               <input type="date"
                 className="showpage-date-select"
-                min={this.todayDateStr()}
-                defaultValue={this.todayDateStr()}
+                min={this.date}
+                defaultValue={this.date}
               />
             </div>
             <div className="showpage-time-container">
