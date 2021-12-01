@@ -57,7 +57,7 @@ class RestaurantShow extends React.Component {
           </div>
 
           <div id="create-reservation-container">
-            <CreateReservationContainer />
+            <CreateReservationContainer restaurantId={restaurant.id}/>
           </div>
         </div>
 

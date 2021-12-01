@@ -6,7 +6,9 @@ class ReservationForm extends React.Component {
     this.state = {
       party_size: 2,
       date: (this.props.date ? this.props.date : this.todayDateStr()),
-      time: (this.props.time ? this.props.time : "7:00 PM")
+      time: (this.props.time ? this.props.time : "7:00 PM"),
+      user_id: this.props.userId,
+      restaurant_id: this.props.restaurantId
     };
     this.handleSubmit = this.handleSubmit.bind(this)
     this.todayDateStr = this.todayDateStr.bind(this)
@@ -23,8 +25,9 @@ class ReservationForm extends React.Component {
     return `${year}-${month}-${day}`;
   }
 
-  handleSubmit() {
+  handleSubmit(e) {
     e.preventDefault();
+    this.props.action(this.state)
   }
 
   update(e) {
@@ -60,11 +63,16 @@ class ReservationForm extends React.Component {
                 className="showpage-date-select"
                 min={this.date}
                 defaultValue={this.date}
+                onChange={this.update("date")}
               />
             </div>
             <div className="showpage-time-container">
               <h2>Time</h2>
-              <select type="text" className="showpage-time-select">
+              <select type="text" 
+                value={this.state.time} 
+                onChange={this.update("time")} 
+                className="showpage-time-select"
+              >
                 <option value="1100am">11:00 AM</option>
                 <option value="1130am">11:30 AM</option>
                 <option value="1200pm">12:00 PM</option>
