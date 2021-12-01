@@ -2,7 +2,9 @@ import React from "react";
 import { FiSearch } from 'react-icons/fi';
 import { FaUtensils } from 'react-icons/fa';
 import { BiHomeAlt } from 'react-icons/bi';
-import { BsCashStack } from 'react-icons/bs'
+import { BsCashStack } from 'react-icons/bs';
+import { CreateReservationContainer } from "../reservations/create_reservation_container";
+
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -34,7 +36,9 @@ class RestaurantShow extends React.Component {
     const { restaurant } = this.props;
     return (
       <div className="showpage-container">
+
         <div className="showpage-banner" />
+
         <div className="showpage-rest-details">
           <h1 className="showpage-name">{restaurant.name}</h1>
           <div id="showpage-shadow">
@@ -50,6 +54,11 @@ class RestaurantShow extends React.Component {
             <img src={restaurant.photo} />
           </div>
         </div>
+
+        <div className="create-reservation-container">
+          <CreateReservationContainer />
+        </div>
+
       </div>
     )
   }
