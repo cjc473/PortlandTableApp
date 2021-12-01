@@ -2,7 +2,7 @@ import React from "react";
 import { FiSearch } from 'react-icons/fi';
 import { FaUtensils } from 'react-icons/fa';
 import { BiHomeAlt } from 'react-icons/bi';
-import { BsCashStack } from 'react-icons/Bs'
+import { BsCashStack } from 'react-icons/bs'
 
 class RestaurantShow extends React.Component {
   constructor(props) {
