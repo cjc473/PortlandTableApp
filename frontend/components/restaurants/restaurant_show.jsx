@@ -42,15 +42,18 @@ class RestaurantShow extends React.Component {
         <div className="showpage-banner" />
         <div className="showpage-rest-details">
           <h1 className="showpage-name">{restaurant.name}</h1>
-          <div className="showpage-detail-icons">
-            <p><FaUtensils /> {restaurant.primary_tag}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BsCashStack /> {this.calculatePrice()}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BiHomeAlt/> {restaurant.neighborhood} </p>
+          <div id="showpage-shadow">
+            <div className="showpage-detail-icons">
+              <p><FaUtensils /> {restaurant.primary_tag}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BsCashStack /> {this.calculatePrice()}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BiHomeAlt /> {restaurant.neighborhood} </p>
+            </div>
+            <div className="additional-tags">
+              <p>Additional Tags</p>
+              <p className="tag">{restaurant.secondary_tag}</p>
+              <p className="tag">{restaurant.tertiary_tag}</p>
+            </div>
+            <p className="showpage-description">{restaurant.description}</p>
+            <img src={restaurant.photo} />
           </div>
-          <div className="additional-tags">
-            <p>Additional Tags</p>
-            <p className="tag">{restaurant.secondary_tag}</p>
-            <p className="tag">{restaurant.tertiary_tag}</p>
-          </div>
-          <p className="showpage-description">{restaurant.description}</p>
         </div>
       </div>
     )

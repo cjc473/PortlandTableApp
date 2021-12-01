@@ -30,14 +30,23 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  height: 600px;
+  min-height: 300px;
   width: 500px;
   padding-top: 20px;
   margin-top: -90px;
-  margin-left: 150px;
+  margin-left: 80px;
   background-color: white;
+  border: 1px solid #d8d9db;
   z-index: 2;
 }
+
+#showpage-shadow {
+  height: 100%;
+  width: 100%;
+  box-shadow: 3px 3px 3px 2px #d8d9db;
+  display: inline-block;
+} 
+
 
 .showpage-name {
   font-size: 48px;
@@ -53,7 +62,7 @@
   margin-left: 20px;
   margin-right: 20px;
   padding-bottom: 13px;
-  border: 1px solid #d8d9db;
+  /* border-bottom: 1px solid #d8d9db; */
   line-height: 1.5em;
 }
 
