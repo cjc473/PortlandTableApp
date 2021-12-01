@@ -18,6 +18,10 @@
   /* min-height: 500px; */
 }
 
+.showpage-forms {
+  display: flex;
+}
+
 .showpage-banner::before {
   content: "";
   position: absolute;
@@ -26,7 +30,7 @@
   z-index: 1;
 }
 
-.showpage-rest-details {
+.showpage-forms > div {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -40,7 +44,11 @@
   z-index: 2;
 }
 
-#showpage-shadow {
+#create-reservation-container {
+  width: 300px;
+}
+
+.showpage-shadow {
   height: 100%;
   width: 100%;
   box-shadow: 3px 3px 3px 2px #d8d9db;
