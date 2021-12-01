@@ -1,8 +1,8 @@
 import React from "react";
-import { FiSearch } from 'react-icons/fi';
-import { FaUtensils } from 'react-icons/fa';
-import { BiHomeAlt } from 'react-icons/bi';
-import { BsCashStack } from 'react-icons/Bs'
+import { FiSearch } from 'react-icons/lib/fi';
+import { FaUtensils } from 'react-icons/lib/fa';
+import { BiHomeAlt } from 'react-icons/lib/bi';
+import { BsCashStack } from 'react-icons/lib/Bs'
 
 class RestaurantShow extends React.Component {
   constructor(props) {
