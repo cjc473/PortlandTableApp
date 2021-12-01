@@ -99,3 +99,58 @@
   background-color: #d8d9db;
 }
 
+.create-res-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-res-form > * {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#create-res-header {
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 12px;
+  padding-bottom: 23px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid #d8d9db;
+}
+
+.showpage-size-select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.showpage-size-select {
+
+}
+
+.showpage-date-time-container {
+
+}
+
+.showpage-date-container {
+  
+}
+
+.showpage-time-container {
+  
+}
+
+.showpage-submit-container {
+
+}
+
+.create-reservation-submit {
+
+}
+
+
+
