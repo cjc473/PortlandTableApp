@@ -20,8 +20,11 @@ class ReservationForm extends React.Component {
   todayDateStr() {
     const todaysDate = new Date();
     const year = todaysDate.getFullYear();
-    const day = todaysDate.getDate();
+    let day = todaysDate.getDate();
     const month = todaysDate.getMonth() + 1;
+    if (day < 10) {
+      day = `0${day}`
+    }
     return `${year}-${month}-${day}`;
   }
 
@@ -66,8 +69,8 @@ class ReservationForm extends React.Component {
               <h2>Date</h2>
               <input type="date"
                 className="showpage-date-select"
-                min={this.date}
-                defaultValue={this.date}
+                min={this.todayDateStr()}
+                defaultValue={this.todayDateStr()}
                 onChange={this.update("date")}
               />
             </div>
