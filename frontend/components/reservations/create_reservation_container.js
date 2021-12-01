@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ReservationForm from "./reservation_form";
-import { createReservation } from "../../actions/reservation_actions";
+// import { createReservation } from "../../actions/reservation_actions";
 
 
 const mSTP = state => ({

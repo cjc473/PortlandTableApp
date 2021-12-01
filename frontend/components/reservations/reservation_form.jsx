@@ -5,14 +5,16 @@ class ReservationForm extends React.Component {
     super(props);
     this.state = {};
     this.handleSubmit = this.handleSubmit.bind(this)
-
-    this.todaysDate = new Date();
-    this.year = todaysDate.getFullYear();
-    this.day = todaysDate.getDate();
-    this.month = todaysDate.getMonth() + 1;
+    this.todayDateStr = this.todayDateStr.bind(this)
   }
 
-
+  todayDateStr() {
+    const todaysDate = new Date();
+    const year = todaysDate.getFullYear();
+    const day = todaysDate.getDate();
+    const month = todaysDate.getMonth() + 1;
+    return `${year}-${month}-${day}`;
+  }
 
   handleSubmit() {
     e.preventDefault();
@@ -42,8 +44,8 @@ class ReservationForm extends React.Component {
             Date
             <input type="date"
               className="showpage-date-select"
-              min={`${year}-${month}-${day}`}
-              defaultValue={`${year}-${month}-${day}`}
+              min={this.todayDateStr}
+              defaultValue={this.todayDateStr}
             />
           </div>
           <div>
