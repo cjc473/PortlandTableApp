@@ -1,3 +1,5 @@
+
+
 export const fetchRestaurants = () => (
   $.ajax({
     method: "GET",
