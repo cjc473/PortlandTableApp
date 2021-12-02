@@ -5,6 +5,11 @@ class ReservationConfirmation extends React.Component {
     super(props)
   }
 
+  componentDidMount() {
+    reservation = this.props.location.state
+    console.log(reservation)
+  }
+
   render() {
     return (
       <h1>this is the confirmation page</h1>

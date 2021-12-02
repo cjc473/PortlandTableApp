@@ -1,6 +1,7 @@
 import React from "react";
 // import { withRouter } from "react-router";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -32,10 +33,10 @@ class ReservationForm extends React.Component {
     return `${year}-${month}-${day}`;
   }
 
-  handleSubmit(e) {
+  handleSubmit(e) { //currently not using handleSubmit
     e.preventDefault();
     let history = useHistory();
-    history.push('/reservations/new', {state: this.state})
+    history.go('/reservations/new', {state: this.state})
     // this.props.action(this.state)
   }
 
@@ -104,6 +105,7 @@ class ReservationForm extends React.Component {
               value="Let's go"
               className="create-reservation-submit"
             />
+            {/* <Link to={{pathname: "/reservations/new", state: this.state}} className="create-reservation-submit">Let's go</Link> */}
           </div>
         </div>
       </form>
