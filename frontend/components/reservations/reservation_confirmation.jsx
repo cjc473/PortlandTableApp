@@ -12,6 +12,7 @@ class ReservationConfirmation extends React.Component {
 
   componentDidMount() {
     this.props.fetchReservation();
+    // this.props.fetchRestaurant(this.props.restaurant.id)
   }
 
   render() {
@@ -25,6 +26,8 @@ class ReservationConfirmation extends React.Component {
         <h1>Reservation confirmed</h1>
         {/* <h2>{restaurant.name}</h2> */}
         <h2>{reservation.time}</h2>
+        <h2>{reservation.date}</h2>
+        <h2>{reservation.party_size}</h2>
       </div>
 
     )

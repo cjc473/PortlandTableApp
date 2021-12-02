@@ -34,10 +34,8 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) { //currently not using handleSubmit
     e.preventDefault();
-    // debugger
     this.props.action(this.state).then(response => {
-      // debugger
-      this.props.history.push(`/reservations/${response.reservation.id}/confirmation`)
+      this.props.history.push(`/reservations/${this.state.restaurant_id}/${response.reservation.id}/confirmation`)
     })
     // remember to grab restaurant or fetch it in container
   }
