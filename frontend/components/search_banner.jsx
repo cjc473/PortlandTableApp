@@ -4,8 +4,11 @@ const SearchBanner = () => {
 
   const todaysDate = new Date();
   const year = todaysDate.getFullYear();
-  const day = todaysDate.getDate();
+  let day = todaysDate.getDate();
   const month = todaysDate.getMonth() + 1;
+  if (day < 10) {
+    day = `0${day}`
+  }
 
   return (
     <div className="banner-container">

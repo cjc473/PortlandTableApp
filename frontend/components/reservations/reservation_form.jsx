@@ -1,4 +1,6 @@
 import React from "react";
+// import { withRouter } from "react-router";
+import { useHistory } from "react-router";
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -17,6 +19,8 @@ class ReservationForm extends React.Component {
 
   //restaurant_id and user_id passed in as props
 
+
+
   todayDateStr() {
     const todaysDate = new Date();
     const year = todaysDate.getFullYear();
@@ -30,8 +34,9 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.todayDateStr())
-    this.props.action(this.state)
+    let history = useHistory();
+    history.push('/reservations/new', {state: this.state})
+    // this.props.action(this.state)
   }
 
   update(field) {
