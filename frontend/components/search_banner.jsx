@@ -1,4 +1,5 @@
 import React from "react";
+import { FaUtensils } from 'react-icons/fa';
 
 const SearchBanner = () => {
 
@@ -20,6 +21,9 @@ const SearchBanner = () => {
             min={`${year}-${month}-${day}`}
             defaultValue={`${year}-${month}-${day}`}
           />
+          <span className="icon-wrapper">
+            <FaUtensils/>
+          </span>
           <select type="text" className="time-select">
             <option value="1100am">11:00 AM</option>
             <option value="1130am">11:30 AM</option>

@@ -8,7 +8,7 @@ import Footer from "./footer";
 import ModalContainer from "./modal/modal_container";
 import RestaurantIndexContainer from "./restaurants/restaurant_index_container";
 import RestaurantShowContainer from "./restaurants/restaurant_show_container";
-import ReservationConfirmation from "./reservations/reservation_confirmation";
+import ReservationConfirmationContainer from "./reservations/reservation_confirmation_container";
 
 
 const App = () => (
@@ -18,7 +18,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route path="/reservations/new" component={ReservationConfirmation} />
+      <Route path="/reservations/:reservationId" component={ReservationConfirmationContainer} />
       <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
       <Route exact path="/" component={RestaurantIndexContainer} />
     </Switch>

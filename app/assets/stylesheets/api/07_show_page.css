@@ -141,6 +141,18 @@
 .showpage-size-select {
   margin-top: 12px;
   margin-bottom: 12px;
+  border: none;
+  border-bottom: 1px solid #d8d9db;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.showpage-size-select:hover {
+  border-color: red;
+}
+
+.showpage-size-select:focus {
+  outline: none;
 }
 
 .showpage-date-time-container {

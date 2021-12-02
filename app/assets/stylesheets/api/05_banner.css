@@ -106,8 +106,44 @@
   .date-select {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    position: relative;
     /* transform: translateY(1px); */
   }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+  }
+/* 
+  .input-container input {
+    border: none;
+    box-sizing: border-box;
+    outline: 0;
+    padding: .75rem;
+    position: relative;
+    width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+} */
 
   .time-select {
     -webkit-appearance: none;
@@ -157,5 +193,10 @@
     text-align: center;
     padding-left: 36px;
     padding-right: 36px;
+  }
+
+  .icon-wrapper {
+    position: absolute;
+    transform: translate(108px, 12px)
   }
 
