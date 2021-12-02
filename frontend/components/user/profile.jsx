@@ -3,17 +3,20 @@ import React from "react";
 class Profile extends React.Component {
   constructor(props) {
     super(props);
-    state: {
+    this.state = {
       reservations: this.myReservations()
     }
   }
 
   render() {
-    <div>
-      <ul>
-        <li>{this.state.reservations.map(res => `this is res ${res.id}`)}</li>
-      </ul>
-    </div>
+    const { reservations } = this.state
+    return(
+      <div>
+        <ul>
+          <li>{reservations ? reservations.map(res => `this is res ${res.id}`) : "No upcoming res"}</li>
+        </ul>
+      </div>
+    )
   }
 
   myReservations() {

@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./logo";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ currentUser, logout, openModal }) => {
 
@@ -10,7 +11,7 @@ const Navbar = ({ currentUser, logout, openModal }) => {
         <Logo />
         {currentUser ? (
           <div id="logout-button-container" className="sessionButtons">
-            <div id="logout-spacer"></div>
+            <div id="logout-spacer"><Link to="/profile">My Profile</Link></div>
             <button id="logout-button" onClick={logout}>Logout</button>
           </div>
         ) : (
