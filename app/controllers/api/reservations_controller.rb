@@ -5,7 +5,7 @@ class Api::ReservationsController < ApplicationController
   end
 
   def show
-    @reservation = Reservation.find(params[:id])
+    @reservation = Reservation.find(params[:id]) #current_user.reservations.last 
     render :show
   end
 

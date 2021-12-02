@@ -1,14 +1,18 @@
 import { connect } from "react-redux";
 import ReservationConfirmation from "./reservation_confirmation";
-import { fetchReservation } from "../../actions/reservation_actions";
+// import { fetchReservations } from "../../actions/reservation_actions";
+import { fetchReservation } from "../../util/reservation_api_util";
 
 
 const mSTP = state => ({
-  reservation: state.entities.reservations[((Object.keys(state.entities.reservations))[length - 1])]
+  // reservation: state.entities.reservations
+  
+  // state.entities.reservations[((Object.keys(state.entities.reservations))[length - 1])]
+  // restaurant: state.entities.restaurants((state.entities.reservations[((Object.keys(state.entities.reservations))[length - 1])]).restaurant_id) 
 })
 
 const mDTP = dispatch => ({
-  fetchReservation: (reservationId) => dispatch(fetchReservation(reservationId))
+  fetchReservation: () => dispatch(fetchReservation())
 })
 
 export default connect(mSTP, mDTP)(ReservationConfirmation)

@@ -1,6 +1,5 @@
 import React from "react";
-// import { withRouter } from "react-router";
-import { useHistory } from "react-router";
+import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
 
 class ReservationForm extends React.Component {
@@ -35,9 +34,8 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) { //currently not using handleSubmit
     e.preventDefault();
-    let history = useHistory();
-    history.go('/reservations/new', {state: this.state})
-    // this.props.action(this.state)
+    this.props.action(this.state)
+    this.props.history.push(`/reservations/confirmation`)
   }
 
   update(field) {
@@ -105,7 +103,7 @@ class ReservationForm extends React.Component {
               value="Let's go"
               className="create-reservation-submit"
             />
-            {/* <Link to={{pathname: "/reservations/new", state: this.state}} className="create-reservation-submit">Let's go</Link> */}
+            {/* <Link to={{pathname: "/reservations/new", state: {}}} className="create-reservation-submit">Let's go</Link> */}
           </div>
         </div>
       </form>
@@ -113,4 +111,4 @@ class ReservationForm extends React.Component {
   }
 }
 
-export default ReservationForm
+export default withRouter(ReservationForm)
