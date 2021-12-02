@@ -19,6 +19,11 @@ export const removeReservation = reservationId => ({
   reservationId
 })
 
+export const fetchUserReservations = userId => dispatch => (
+  ReservationAPIUtil.fetchUserReservations(userId)
+    .then(reservations => dispatch(receiveReservations(reservations)))
+)
+
 export const fetchReservations = () => dispatch => (
   ReservationAPIUtil.fetchReservations()
     .then(reservations => dispatch(receiveReservations(reservations)))

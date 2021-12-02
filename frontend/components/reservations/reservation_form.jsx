@@ -34,8 +34,12 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) { //currently not using handleSubmit
     e.preventDefault();
-    this.props.action(this.state)
-    this.props.history.push(`/reservations/confirmation`)
+    // debugger
+    this.props.action(this.state).then(response => {
+      // debugger
+      this.props.history.push(`/reservations/${response.reservation.id}/confirmation`)
+    })
+    // remember to grab restaurant or fetch it in container
   }
 
   update(field) {
@@ -47,7 +51,7 @@ class ReservationForm extends React.Component {
 
   render() {
     return (
-      <form className="create-res-form" onSubmit={this.handleSubmit}>
+      <form id="create-res-form" onSubmit={this.handleSubmit}>
         <h1 id="create-res-header">Make a reservation</h1>
         <div id="res-form-shadow" className="showpage-shadow">
           <div className="showpage-size-select-container">

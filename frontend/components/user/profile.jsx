@@ -4,12 +4,17 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      reservations: this.myReservations()
     }
   }
 
+  componentDidMount() {
+    this.props.fetchUserReservations(this.props.currentUser.id)
+  }
+
   render() {
-    const { reservations } = this.state
+    if (!this.props.currentUser) return null;
+    const { reservations } = this.props;
+    // if (!reservations) return null;
     return(
       <div>
         <ul>
@@ -19,9 +24,6 @@ class Profile extends React.Component {
     )
   }
 
-  myReservations() {
-    this.props.reservations.filter(reservation => reservation[user_id] === this.props.currentUser.id)
-  }
 }
 
 export default Profile

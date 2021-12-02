@@ -11,22 +11,12 @@ class ReservationConfirmation extends React.Component {
   // }
 
   componentDidMount() {
-    // const
-    // let reservations = this.props.fetchReservations();
-    // console.log(reservations)
+    this.props.fetchReservation();
   }
 
-  // componentDidMount() {
-  //   const { wildcard } = this.props.match.params
-  //   const { thing you're trying to pull } = this.props.location.state
-
-  //   fetch()
-  //     .then((user) => {
-  //       this.setState(() => ({ user }))
-  //     })
-  // }
-
   render() {
+    if (!this.props.reservation) return null;
+    const {reservation} = this.props
     // const { reservation, restaurant } = this.props
     // console.log('begin here')
     // console.log(this.props)
@@ -34,7 +24,7 @@ class ReservationConfirmation extends React.Component {
       <div className="confirmation-page-container">
         <h1>Reservation confirmed</h1>
         {/* <h2>{restaurant.name}</h2> */}
-        {/* <h2>{reservation.time}</h2> */}
+        <h2>{reservation.time}</h2>
       </div>
 
     )

@@ -1,4 +1,5 @@
 import React from "react";
+import { Redirect } from "react-router";
 import { Route, Switch } from "react-router-dom";
 import { AuthRoute } from "../util/route_util";
 import NavbarContainer from "./navbar/navbar_container";
@@ -9,7 +10,7 @@ import ModalContainer from "./modal/modal_container";
 import RestaurantIndexContainer from "./restaurants/restaurant_index_container";
 import RestaurantShowContainer from "./restaurants/restaurant_show_container";
 import ReservationConfirmationContainer from "./reservations/reservation_confirmation_container";
-import ProfileContainer from "./user/profile.container";
+import ProfileContainer from "./user/profile_container";
 
 
 const App = () => (
@@ -19,10 +20,11 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route path="/reservations/confirmation" component={ReservationConfirmationContainer} />
+      <Route path="/reservations/:reservationId/confirmation" component={ReservationConfirmationContainer} />
       <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
       <Route path="/profile" component={ProfileContainer} />
       <Route exact path="/" component={RestaurantIndexContainer} />
+      <Redirect to="/" />
     </Switch>
     <Footer />
   </div>
