@@ -18,13 +18,13 @@ class RestaurantCard extends React.Component {
 
   render() {
     // if (!this.props.restaurants) return null;
-    console.log(this.props.restaurants);
-    console.log(this.props.restaurantId);
+    // console.log(this.props.restaurants);
+    // console.log(this.props.restaurantId);
     const { restaurants } = this.props;
     const { restaurantId } = this.props;
-    console.log(restaurants)
+    // console.log(restaurants)
     const restaurant = restaurants[restaurantId];
-    console.log(restaurant)
+    // console.log(restaurant)
 
     // console.log(this.state.restaurant)
     if (!restaurant) return null;
@@ -32,6 +32,7 @@ class RestaurantCard extends React.Component {
       <div>
         restaurant card placeholder
         <p>{restaurant.name}</p>
+        <img src={restaurant.photo} alt="" />
       </div>
     )
   }

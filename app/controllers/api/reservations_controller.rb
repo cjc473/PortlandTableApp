@@ -1,6 +1,5 @@
 class Api::ReservationsController < ApplicationController
   def index
-    debugger
     if params[:user_id]
       @reservations = Reservation.where({user_id: params[:user_id]})
       render :index

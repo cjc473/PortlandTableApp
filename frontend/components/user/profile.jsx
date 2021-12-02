@@ -18,7 +18,7 @@ class Profile extends React.Component {
     return(
       <div>
         <ul>
-          <li>{reservations ? reservations.map(res => `this is res ${res.id}`) : "No upcoming res"}</li>
+          {reservations ? reservations.map(res => `this is res ${res.id}`) : "No upcoming res"}
         </ul>
       </div>
     )
