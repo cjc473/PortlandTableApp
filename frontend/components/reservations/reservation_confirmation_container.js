@@ -7,6 +7,7 @@ import { fetchRestaurant } from "../../actions/restaurant_actions";
 
 const mSTP = (state, ownProps) => ({
   reservation: state.entities.reservations[ownProps.match.params.reservationId],
+  restaurantId: ownProps.match.params.restaurantId
   // restaurant: state.entities.restaurants[ownProps.match.params.reservationId.restaurant_id]
   // reservation: state.entities.reservations
   
@@ -16,6 +17,7 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch, ownProps) => ({
   fetchReservation: () => dispatch(fetchReservation(ownProps.match.params.reservationId)),
+  fetchRestaurant: (restaurantId) => dispatch(fetchRestaurant(restaurantId))
   // fetchRestaurant: (restaurantId) => dispatch(fetchRestaurant(restaurantId))
 })
 
