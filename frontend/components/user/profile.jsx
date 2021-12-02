@@ -1,4 +1,5 @@
 import React from "react";
+import ReservationCardContainer from "./reservation_card_container";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchUserReservations(this.props.currentUser.id)
+    this.props.fetchUserReservations(this.props.currentUser.id);
+    this.props.fetchRestaurants();
   }
 
   render() {
@@ -18,7 +20,7 @@ class Profile extends React.Component {
     return(
       <div>
         <ul>
-          {reservations ? reservations.map(res => `this is res ${res.id}`) : "No upcoming res"}
+          {reservations ? reservations.map(res => <ReservationCardContainer reservation={res}/>) : "No upcoming res"}
         </ul>
       </div>
     )
