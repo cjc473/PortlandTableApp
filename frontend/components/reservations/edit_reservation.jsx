@@ -21,7 +21,7 @@ class EditReservation extends React.Component {
           <RestaurantCardContainer restaurantId={this.props.restaurantId} />
         </div>
         <div class="edit-form-container">
-          <ReservationForm
+          <ReservationForm id="edit-form"
             party_size={reservation.party_size}
             date={reservation.date}
             time={reservation.time}

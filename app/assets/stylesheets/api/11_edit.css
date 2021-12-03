@@ -19,7 +19,19 @@
 }
 
 .edit-form-container {
+  padding-top: 20px;
+  margin-top: 50px;
+  position: relative;
+  margin-bottom: 300px;
   display: flex;
-  width: 256px;
+  width: 300px;
+  padding-bottom: 32px;
+  border: 1px solid #dcdddf;
+  border-radius: 8px;
   background-color: white;
+  box-shadow: 2px 2px 2px #dcdddf
+}
+
+#edit-form {
+
 }
