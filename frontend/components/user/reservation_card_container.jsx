@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import ReservationCard from "./reservation_card";
-import { fetchRestaurants } from "../../actions/restaurant_actions";
+import { deleteReservation } from "../../actions/reservation_actions";
 
 const mSTP = (state, ownProps) => {
   // debugger;
@@ -13,8 +13,8 @@ const mSTP = (state, ownProps) => {
 
 
 
-// const mDTP = dispatch => ({
-//   fetchRestaurants: () => dispatch(fetchRestaurants())
-// })
+const mDTP = (dispatch, ownProps) => ({
+  deleteReservation: () => dispatch(deleteReservation(ownProps.match.params.reservationId))
+})
 
-export default connect(mSTP, null)(ReservationCard)
+export default connect(mSTP, mDTP)(ReservationCard)
