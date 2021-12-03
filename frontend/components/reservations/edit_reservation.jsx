@@ -16,15 +16,20 @@ class EditReservation extends React.Component {
     if (!this.props.reservation) return null;
     const { reservation } = this.props
     return(
-      <div>
-        <RestaurantCardContainer restaurantId={this.props.restaurantId} />
-        <ReservationForm 
-          party_size={reservation.party_size} 
-          date={reservation.date} 
-          time={reservation.time} 
-          user_id={this.props.user_id}
-          restaurant_id={this.props.restaurant_id}
-        />
+      <div class="edit-page-container">
+        <div class="edit-card-restaurant-container">
+          <RestaurantCardContainer restaurantId={this.props.restaurantId} />
+        </div>
+        <div class="edit-form-container">
+          <ReservationForm
+            party_size={reservation.party_size}
+            date={reservation.date}
+            time={reservation.time}
+            user_id={this.props.user_id}
+            restaurant_id={this.props.restaurant_id}
+            formType={this.props.formType}
+          />
+        </div>
       </div>
     )
 
