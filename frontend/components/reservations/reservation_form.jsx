@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = this.props.reservation ? this.props.reservation : {
       party_size: (this.props.party_size ? this.props.party_size : 2),
       date: (this.props.date ? this.props.date : this.todayDateStr()),
       time: (this.props.time ? this.props.time : "7:00 PM"),
@@ -30,9 +30,14 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) { 
     e.preventDefault();
-    this.props.action(this.state).then(response => {
-      this.props.history.push(`/reservations/${this.state.restaurant_id}/${response.reservation.id}/confirmation`)
-    })
+    if (this.props.formType === "Edit Reservation") {
+      this.props.action(this.state);
+      this.props.history.push(`/profile`);
+    } else {
+      this.props.action(this.state).then(response => {
+        this.props.history.push(`/reservations/${this.state.restaurant_id}/${response.reservation.id}/confirmation`)
+      })
+    }
   }
 
   update(field) {
@@ -71,7 +76,7 @@ class ReservationForm extends React.Component {
               <input type="date"
                 className="showpage-date-select"
                 min={this.todayDateStr()}
-                defaultValue={this.todayDateStr()}
+                value={this.state.date}
                 onChange={this.update("date")}
               />
             </div>

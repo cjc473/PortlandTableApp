@@ -15,6 +15,7 @@ class EditReservation extends React.Component {
   render () {
     if (!this.props.reservation) return null;
     const { reservation } = this.props
+    console.log(reservation.date)
     return(
       <div class="edit-page-container">
         <div class="edit-card-restaurant-container">
@@ -28,6 +29,8 @@ class EditReservation extends React.Component {
             user_id={this.props.user_id}
             restaurant_id={this.props.restaurant_id}
             formType={this.props.formType}
+            action={this.props.action}
+            reservation={reservation}
           />
         </div>
       </div>
