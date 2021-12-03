@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 700px;
+  width: 650px;
   background-color: white;
   margin: 100px 300px;
   border: 1px solid #dcdddf;
@@ -45,7 +45,7 @@
 .profile-list-header {
   font-size: 24px;
   padding-bottom: 15px;
-  width: 640px;
+  width: 590px;
   text-align: center;
   margin-top: 15px;
   border-bottom: 1px solid #F1F2F4;
@@ -61,10 +61,16 @@
   position: relative;
 }
 
+.reservation-card-text-container {
+  display: flex;
+  justify-content: space-between;
+  width: 330px;
+}
+
 .reservation-card-details {
   display: flex;
   flex-direction: column;
-  margin: 0px 20px;
+  margin: 0px 10px;
 }
 
 .reservation-card-details > h2 {
@@ -83,9 +89,10 @@
 }
 
 .reservation-card-button-container {
+  margin-top: 35px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   width: 160px;
 }
 
@@ -96,16 +103,29 @@
   padding: 8px 16px;
   font-size: 14px;
   font-weight: 500;
-  background-color: rgb(218, 55, 67);
-  border: 1px solid rgb(184, 34, 45);
+  /* background-color: rgb(218, 55, 67);
+  border: 1px solid rgb(184, 34, 45); */
+  background-color: #247f9e;
   color: #FFF;
   border-radius: 5px;
 }
 
 .reservation-card-button:hover {
-  background-color: rgb(142, 37, 44);
-  border: 1px solid rgb(122, 35, 39);
+  background-color: #1f6880;
+  /* background-color: rgb(142, 37, 44);
+  border: 1px solid rgb(122, 35, 39); */
 } 
+
+#signup-button {
+  border: 0.0625rem solid #247f9e;
+  background-color: #247f9e;
+  color: #fff;
+  margin-right: 15px;
+}
+
+#signup-button:hover {
+  background-color: #1f6880;
+}
 
 /* .confirmation-page-container {
   display: flex;
