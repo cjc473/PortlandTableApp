@@ -18,11 +18,21 @@ class Profile extends React.Component {
     const { reservations } = this.props;
     // if (!reservations) return null;
     return(
-      <div>
-        <ul>
-          {reservations ? reservations.map(res => <ReservationCardContainer reservation={res}/>) : "No upcoming res"}
-        </ul>
+      <div className="profile-page-container">
+        <div className="user-welcome">
+          <h2>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h2>
+        </div>
+        <div className="user-reservations-container">
+          <div>
+            <ul>
+              {reservations ? reservations.map(res => <ReservationCardContainer reservation={res} />) : "No upcoming res"}
+            </ul>
+          </div>
+        </div>
+
+
       </div>
+
     )
   }
 
