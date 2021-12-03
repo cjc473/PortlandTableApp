@@ -1,3 +1,39 @@
+.profile-page-container {
+  background-color: #F1F2F4;
+  height: 100%;
+  min-height: 800px;
+}
+
+.user-welcome {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  position: relative;
+  width: 100%;
+  font-size: 36px;
+  font-weight: 600;
+  border: 1px solid #F1F2F4;
+  border-bottom: 1px solid #dcdddf;
+  background-color: white;
+  /* border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; */
+  box-shadow: 2px 2px 2px #dcdddf;
+  clip-path: inset(-5px 0px -5px -5px);
+  /* margin: 30px, 0; */
+}
+
+#welcome-msg {
+  margin-left: 300px;
+}
+
+.user-reservations-container {
+  display: flex;
+  width: 600px;
+  background-color: white;
+  margin: 300px 300px;
+  border: 1px solid #dcdddf;
+}
+
 /* .confirmation-page-container {
   display: flex;
   flex-direction: column;

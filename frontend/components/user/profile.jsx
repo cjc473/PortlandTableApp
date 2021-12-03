@@ -20,7 +20,7 @@ class Profile extends React.Component {
     return(
       <div className="profile-page-container">
         <div className="user-welcome">
-          <h2>{this.props.currentUser.first_name} {this.props.currentUser.last_name}</h2>
+          <h2 id="welcome-msg">Hi, {this.props.currentUser.first_name}.</h2>
         </div>
         <div className="user-reservations-container">
           <div>
@@ -29,8 +29,6 @@ class Profile extends React.Component {
             </ul>
           </div>
         </div>
-
-
       </div>
 
     )
