@@ -5,10 +5,18 @@ class EditReservation extends React.Component {
     super(props)
   }
 
+  componentDidMount() {
+    this.props.fetchReservation();
+    this.props.fetchRestaurant(this.props.restaurantId);
+  }
+
   render () {
-    <div>
-      this is an edit form
-    </div>
+    return(
+      <div>
+        this is an edit form
+      </div>
+    )
+
   }
 }
 

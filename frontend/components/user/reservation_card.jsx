@@ -6,9 +6,11 @@ class ReservationCard extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
-    this.state = {
-      editFormOn: false
-    }
+    // this.state = {
+    //   editFormOn: false
+    // }
+    // this.toggleEdit = this.toggleEdit.bind(this);
+    // this.editFormOn = false;
   }
 
   componentDidMount() {
@@ -18,15 +20,6 @@ class ReservationCard extends React.Component {
   handleDelete() {
     this.props.deleteReservation(this.props.reservation);
   }
-
-  toggleEdit() {
-    if (this.state.editFormOn) {
-      this.setState({ [editFormOn]: false })
-    } else {
-      this.setState(({ [editFormOn]: true }))
-    }
-  }
-
 
   render() {
     if ((!this.props.restaurant) || (!this.props.reservation)) return null;
@@ -48,13 +41,10 @@ class ReservationCard extends React.Component {
               <p><BiUserCircle fontSize="24px" /> &nbsp;&nbsp;Table for {reservation.party_size}</p>
             </div>
             <div className="reservation-card-button-container">
-              <button className="reservation-card-button" onClick={() => this.toggleEdit()}>Modify</button>
+              <Link to={`/reservations/${restaurant.id}/${reservation.id}/edit`}><button className="reservation-card-button">Modify</button></Link>
               <button className="reservation-card-button" onClick={() => this.handleDelete()}>Cancel</button>
             </div>
           </div>
-        </div>
-        <div className="editFormContainer">
-          {this.state.editFormOn ? "hi" : "goodbye"}
         </div>
       </div>
     )
