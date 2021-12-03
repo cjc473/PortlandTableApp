@@ -1,4 +1,6 @@
 import React from "react";
+import { BiTimeFive, BiCalendarAlt, BiUserCircle } from 'react-icons/bi'
+import { Link } from "react-router-dom";
 
 class ReservationCard extends React.Component {
   constructor(props) {
@@ -24,10 +26,14 @@ class ReservationCard extends React.Component {
     console.log(restaurant)
     // console.log(restaurant.id)
     return (
-      <div>
-        <p>{restaurant.name}</p>
-        <p>{reservation.time}</p>
-        <br />
+      <div className="reservation-card-container">
+        <div className="reservation-card-pic"><img src={restaurant.photo} alt="" /></div>
+        <div className="reservation-card-details">
+          <h2>{restaurant.name}</h2>
+          <p><BiTimeFive font-size="24px" /> &nbsp;&nbsp;{reservation.time}</p>
+          <p><BiCalendarAlt font-size="24px" /> &nbsp;&nbsp;{reservation.date}</p>
+          <p><BiUserCircle font-size="24px" /> &nbsp;&nbsp;Table for {reservation.party_size}</p>
+        </div>
       </div>
     )
   }

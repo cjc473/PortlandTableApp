@@ -39,7 +39,7 @@ class ReservationConfirmation extends React.Component {
             <div className="confirm-card-details">
               <h2><BiTimeFive font-size="24px" /> &nbsp;&nbsp; {reservation.time}</h2>
               <h2><BiCalendarAlt font-size="24px" /> &nbsp;&nbsp; {reservation.date}</h2>
-              <h2><BiUserCircle font-size="24px" /> &nbsp;&nbsp; {reservation.party_size}</h2>
+              <h2><BiUserCircle font-size="24px" /> &nbsp;&nbsp; Table for {reservation.party_size}</h2>
             </div>
             <div className="card-link"><Link to="/">Book another reservation</Link></div>
             <div className="card-link"><Link to="/profile">Manage my reservations</Link></div>
