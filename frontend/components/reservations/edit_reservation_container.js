@@ -13,4 +13,4 @@ const mDTP = dispatch => ({
 })
 
 
-export default connect(mSTP)(mDTP)(ReservationForm)
+export default connect(mSTP)(mDTP)(EditReservation)
