@@ -1,5 +1,5 @@
 import React from "react";
-import { BiTimeFive, BiCalendarAlt, BiUserCircle } from 'react-icons/bi'
+import { BiTimeFive, BiCalendarAlt, BiUserCircle, BiSearch } from 'react-icons/bi'
 
 const SearchBanner = () => {
 
@@ -31,6 +31,9 @@ const SearchBanner = () => {
           <div id="banner-clock" className="icon-wrapper">
             <BiTimeFive fontSize="24px"/>
           </div>
+          <div id="banner-magnifier" className="icon-wrapper">
+            <BiSearch fontSize="24px"/>
+          </div>
           <select type="text" className="time-select">
             <option value="1100am">11:00 AM</option>
             <option value="1130am">11:30 AM</option>
@@ -59,7 +62,7 @@ const SearchBanner = () => {
           <input type="text"
             value=""
             className="search-field"
-            placeholder="Restaurant or Cuisine"
+            placeholder={`   Restaurant or Cuisine`}
           />
           <input type="submit"
             value="Let's go"

@@ -79,7 +79,7 @@
 
 #logout-spacer {
   margin-top: 20px;
-  margin-right: 80px;
+  margin-right: 40px;
   padding-left: 16px;
   padding-right: 16px;
   font-size: 16px;
@@ -95,4 +95,13 @@
 
 #logout-button:hover {
   background-color: #d8d9db;
+}
+
+#profile-img {
+  color: #247f9e;
+  transform: translate(10px, -11px);
+}
+
+#profile-img:hover {
+  color: #1f6880;
 }

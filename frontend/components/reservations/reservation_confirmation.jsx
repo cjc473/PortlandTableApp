@@ -4,6 +4,7 @@ import { BsCheckCircleFill } from 'react-icons/bs'
 import { BiTimeFive, BiCalendarAlt, BiUserCircle } from 'react-icons/bi'
 import { Link } from "react-router-dom";
 
+
 class ReservationConfirmation extends React.Component {
   constructor(props) {
     super(props)

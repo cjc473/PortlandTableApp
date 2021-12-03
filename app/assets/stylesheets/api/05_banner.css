@@ -181,7 +181,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .search-field {
     background-color: white;
     padding-left: 24px;
-    padding-right: 48px;
+    padding-right: 72px;
     text-align: center;
   }
 
@@ -204,7 +204,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   #banner-calendar {
-    transform: translate(10px, -34px)
+    transform: translate(10px, -35px)
   }
 
   #banner-person {
@@ -213,5 +213,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   #banner-clock {
     transform: translate(200px, -34px)
+  }
+
+  #banner-magnifier {
+    transform: translate(464px, -34px);
+    z-index: 3;
   }
 
