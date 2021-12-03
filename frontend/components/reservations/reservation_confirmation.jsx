@@ -1,5 +1,6 @@
 import React from "react";
 import RestaurantCardContainer from "./restaurant_card_container";
+import { BsCheckCircleFill } from 'react-icons/bs'
 
 class ReservationConfirmation extends React.Component {
   constructor(props) {
@@ -27,15 +28,18 @@ class ReservationConfirmation extends React.Component {
     // console.log('begin here')
     // console.log(this.props)
     return (
-      <div className="confirmation-page-container">
-        <RestaurantCardContainer restaurantId={this.props.restaurantId}/>
-        <h1>Reservation confirmed</h1>
-        {/* <h2>{restaurant.name}</h2> */}
-        <h2>{reservation.time}</h2>
-        <h2>{reservation.date}</h2>
-        <h2>{reservation.party_size}</h2>
+      <div className="card-background"> 
+        <div className="confirmation-page-container">
+          <div className="confirmation-container">
+            <h2 id="confirmation-message"><BsCheckCircleFill color="green" />Reservation confirmed</h2>
+            <RestaurantCardContainer restaurantId={this.props.restaurantId} />
+            {/* <h2>{restaurant.name}</h2> */}
+            <h2>{reservation.time}</h2>
+            <h2>{reservation.date}</h2>
+            <h2>{reservation.party_size}</h2>
+          </div>
+        </div>
       </div>
-
     )
   }
 }

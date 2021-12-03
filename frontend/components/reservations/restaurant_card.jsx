@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class RestaurantCard extends React.Component {
   constructor(props) {
     super(props)
@@ -29,11 +30,14 @@ class RestaurantCard extends React.Component {
     // console.log(this.state.restaurant)
     if (!restaurant) return null;
     return (
-      <div>
-        restaurant card placeholder
-        <p>{restaurant.name}</p>
-        <img src={restaurant.photo} alt="" />
-      </div>
+
+        <div className="restaurant-card-container">
+          <div className="icon-pic" className="card-photo-container">
+            <img src={restaurant.photo} />
+          </div>
+          <h2 className="card-confirmed-name">{restaurant.name}</h2>
+        </div>
+
     )
   }
 }
