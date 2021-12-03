@@ -17,10 +17,6 @@ class ReservationForm extends React.Component {
     this.update = this.update.bind(this)
   }
 
-  //restaurant_id and user_id passed in as props
-
-
-
   todayDateStr() {
     const todaysDate = new Date();
     const year = todaysDate.getFullYear();
@@ -32,12 +28,11 @@ class ReservationForm extends React.Component {
     return `${year}-${month}-${day}`;
   }
 
-  handleSubmit(e) { //currently not using handleSubmit
+  handleSubmit(e) { 
     e.preventDefault();
     this.props.action(this.state).then(response => {
       this.props.history.push(`/reservations/${this.state.restaurant_id}/${response.reservation.id}/confirmation`)
     })
-    // remember to grab restaurant or fetch it in container
   }
 
   update(field) {

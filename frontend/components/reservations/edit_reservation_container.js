@@ -1,16 +1,16 @@
-// import { connect } from "react-redux";
-// import ReservationForm from "./reservation_form";
-// import { createReservation } from "../../actions/reservation_actions";
+import { connect } from "react-redux";
+import ReservationForm from "./reservation_form";
+import { updateReservation } from "../../actions/reservation_actions";
 
 
-// const mSTP = state => ({
-//   user_id: state.session.id,
-//   formType: "Edit Reservation"
-// })
+const mSTP = state => ({
+  user_id: state.session.id,
+  formType: "Edit Reservation"
+})
 
-// const mDTP = dispatch => ({
-//   action: reservation => dispatch(createReservation(reservation))
-// })
+const mDTP = dispatch => ({
+  action: reservation => dispatch(updateReservation(reservation))
+})
 
 
-// export default connect(mSTP)(mDTP)(ReservationForm)
+export default connect(mSTP)(mDTP)(ReservationForm)

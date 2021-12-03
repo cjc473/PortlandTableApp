@@ -3,8 +3,8 @@ import ReservationForm from "./reservation_form";
 import { createReservation } from "../../actions/reservation_actions";
 
 const mSTP = state => ({
-  userId: state.session.id
-  // formType: "Create Reservation"
+  userId: state.session.id,
+  formType: "Make a reservation"
 })
 
 const mDTP = dispatch => ({
