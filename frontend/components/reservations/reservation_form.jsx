@@ -45,7 +45,7 @@ class ReservationForm extends React.Component {
   render() {
     return (
       <form id="create-res-form" onSubmit={this.handleSubmit}>
-        <h1 id="create-res-header">Make a reservation</h1>
+        <h1 id="create-res-header">{this.props.formType}</h1>
         <div id="res-form-shadow" className="showpage-shadow">
           <div className="showpage-size-select-container">
             <h2>Party Size</h2>
