@@ -1,5 +1,5 @@
 import React from "react";
-import { FaUtensils } from 'react-icons/fa';
+import { BiTimeFive, BiCalendarAlt, BiUserCircle } from 'react-icons/bi'
 
 const SearchBanner = () => {
 
@@ -21,9 +21,16 @@ const SearchBanner = () => {
             min={`${year}-${month}-${day}`}
             defaultValue={`${year}-${month}-${day}`}
           />
-          <span className="icon-wrapper">
-            <FaUtensils/>
-          </span>
+
+          <div id="banner-calendar"className="icon-wrapper">
+            <BiCalendarAlt fontSize="24px"/>
+          </div>
+          <div id="banner-person" className="icon-wrapper">
+            <BiUserCircle fontSize="24px"/>
+          </div>
+          <div id="banner-clock" className="icon-wrapper">
+            <BiTimeFive fontSize="24px"/>
+          </div>
           <select type="text" className="time-select">
             <option value="1100am">11:00 AM</option>
             <option value="1130am">11:30 AM</option>
