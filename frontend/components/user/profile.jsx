@@ -23,7 +23,8 @@ class Profile extends React.Component {
           <h2 id="welcome-msg">Hi, {this.props.currentUser.first_name}.</h2>
         </div>
         <div className="user-reservations-container">
-          <div>
+          <h2 className="profile-list-header">Upcoming Reservations</h2>
+          <div className="user-reservations-list">
             <ul>
               {reservations ? reservations.map(res => <ReservationCardContainer reservation={res} />) : "No upcoming res"}
             </ul>
