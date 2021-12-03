@@ -6,7 +6,7 @@ class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      party_size: 2,
+      party_size: (this.props.party_size ? this.props.party_size : 2),
       date: (this.props.date ? this.props.date : this.todayDateStr()),
       time: (this.props.time ? this.props.time : "7:00 PM"),
       user_id: this.props.userId,
@@ -87,16 +87,16 @@ class ReservationForm extends React.Component {
                 onChange={this.update("time")} 
                 className="showpage-time-select"
               >
-                <option value="1100am">11:00 AM</option>
-                <option value="1130am">11:30 AM</option>
-                <option value="1200pm">12:00 PM</option>
-                <option value="1230pm">12:30 PM</option>
-                <option value="600pm">6:00 PM</option>
-                <option value="630pm">6:30 PM</option>
-                <option value="700pm">7:00 PM</option>
-                <option value="730pm">7:30 PM</option>
-                <option value="800pm">8:00 PM</option>
-                <option value="830pm">8:30 PM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="11:30 AM">11:30 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="12:30 PM">12:30 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="6:30 PM">6:30 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="7:30 PM">7:30 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+                <option value="8:30 PM">8:30 PM</option>
               </select>
             </div>
           </div>
