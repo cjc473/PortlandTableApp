@@ -13,8 +13,8 @@ const mSTP = (state, ownProps) => {
 
 
 
-const mDTP = (dispatch, ownProps) => ({
-  deleteReservation: () => dispatch(deleteReservation(ownProps.match.params.reservationId))
+const mDTP = (dispatch) => ({
+  deleteReservation: (reservation) => dispatch(deleteReservation(reservation.id))
 })
 
 export default connect(mSTP, mDTP)(ReservationCard)

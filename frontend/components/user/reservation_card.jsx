@@ -17,7 +17,7 @@ class ReservationCard extends React.Component {
   }
 
   handleDelete() {
-    this.props.deleteReservation();
+    this.props.deleteReservation(this.props.reservation);
   }
 
 
