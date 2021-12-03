@@ -6,14 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'open-uri'
+
 Restaurant.destroy_all
 User.destroy_all
+
 
 
 users = User.create([{ first_name: "Guest", last_name: "User", email: 'demo@gmail.com', password: 'demo1234' }])
 
 restaurant1 = Restaurant.create!(
-  name: "Southpark Seafood", 
+  name: "Southpark Seafood1", 
   description: "Southpark Seafood is a chic Northwest eatery featuring sustainable seafood and farm-fresh ingredients. With the area’s largest selection of oysters, a menu that changes every single day and an innovative thirteen-seat raw bar, you won’t find a better place for a dozen on the half shell.",
   price: "$$$",
   neighborhood: "Southwest", 
