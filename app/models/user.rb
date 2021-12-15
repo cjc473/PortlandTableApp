@@ -23,6 +23,11 @@ class User < ApplicationRecord
 
   has_many :reservations
 
+  has_many :reviews,
+    class_name: :Review,
+    foreign_key: :author_id,
+    primary_key: :id
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     user && user.is_valid_password?(password) ? user : nil
