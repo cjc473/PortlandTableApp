@@ -41,7 +41,7 @@ export const createReservation = reservation => dispatch => (
 
 export const updateReservation = reservation => dispatch => (
   ReservationAPIUtil.updateReservation(reservation)
-    .then(updatedReservation => dispatch (receiveReservation(updatedReservation)))
+    .then(updatedReservation => dispatch(receiveReservation(updatedReservation)))
 )
 
 export const deleteReservation = reservationId => dispatch => (
