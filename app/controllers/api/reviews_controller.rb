@@ -3,36 +3,24 @@ class Api::ReviewsController < ApplicationController
   def index
     if params[:restaurant_id]
       @reviews = Review.where({restaurant_id: params[:restaurant_id]})
-      # need to customize controller and then add jbuilder
-  end
-
-  def index
-    if params[:user_id]
-      @reservations = Reservation.where({user_id: params[:user_id]})
-      render :index
-    else
-      @reservations = Reservation.all 
-      render :index
+    elsif params[:user_id] 
+      @reviews = Review.where({user_id: params[:user_id]})
     end
-  end
-
-  def show
-    @reservation = Reservation.find(params[:id]) #current_user.reservations.last 
-    render :show
+    render :index
   end
 
   def create
-    @reservation = Reservation.create(reservation_params)
-    if @reservation.save
+    @review = Review.create(review_params)
+    if @review.save
       render :show
     else
-      render json: @reservation.errors.full_messages, status: 422
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
   def update
-    @reservation = Reservation.find(params[:id])
-    if @reservation.update(reservation_params)
+    @review = Review.find(params[:id])
+    if @review.update(review_params)
       render :show
     else
       render json: @reservation.errors.full_messages, status: 422
@@ -40,17 +28,17 @@ class Api::ReviewsController < ApplicationController
   end
 
   def destroy
-    @reservation = Reservation.find(params[:id])
-    if @reservation.destroy
+    @review = Review.find(params[:id])
+    if @review.destroy
     else 
-      render json: ['Unable to delete reservation, must be logged in as correct user'], status: 422
+      render json: ['Unable to delete review, must be logged in as correct user'], status: 422
     end
   end
 
   private
 
-  def reservation_params
-    params.require(:reservation).permit(:restaurant_id, :user_id, :party_size, :date, :time)
+  def review_params
+    params.require(:review).permit(:title, :body, :score, :restaurant_id, :author_id)
   end
 
 end

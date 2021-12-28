@@ -2,11 +2,10 @@ class Api::ReservationsController < ApplicationController
   def index
     if params[:user_id]
       @reservations = Reservation.where({user_id: params[:user_id]})
-      render :index
     else
       @reservations = Reservation.all #need to update so it filters by current user
-      render :index
     end
+    render :index
   end
 
   def show
