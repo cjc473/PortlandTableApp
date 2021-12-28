@@ -3,13 +3,13 @@ class Api::ReservationsController < ApplicationController
     if params[:user_id]
       @reservations = Reservation.where({user_id: params[:user_id]})
     else
-      @reservations = Reservation.all #need to update so it filters by current user
+      @reservations = Reservation.all 
     end
     render :index
   end
 
   def show
-    @reservation = Reservation.find(params[:id]) #current_user.reservations.last 
+    @reservation = Reservation.find(params[:id])  
     render :show
   end
 

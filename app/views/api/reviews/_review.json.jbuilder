@@ -1,0 +1,1 @@
+json.extract! review, :id, :title, :body, :score, :restaurant_id, :author_id
