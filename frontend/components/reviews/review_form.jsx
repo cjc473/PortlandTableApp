@@ -11,4 +11,8 @@ class ReviewForm extends React.Component {
       author_id: this.props.userId
     }
   }
+
+  render() {
+    return "this is a review form"
+  }
 }
