@@ -16,3 +16,5 @@ class ReviewForm extends React.Component {
     return "this is a review form"
   }
 }
+
+export default ReviewForm
