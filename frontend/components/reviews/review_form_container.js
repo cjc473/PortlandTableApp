@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import ReviewForm from "./review_form";
 
 const mSTP = (state, ownProps) => ({
-  restaurantId =
+  restaurantId
 })
 
 const mDTP = (dispatch, ownProps) => ({
