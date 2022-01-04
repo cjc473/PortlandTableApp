@@ -10,10 +10,19 @@ class ReviewForm extends React.Component {
       restaurant_id: this.props.restaurantId,
       author_id: this.props.userId
     }
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
   }
 
   render() {
-    return "this is a review form"
+    return (
+      <div>
+        <form ></form>
+      </div>
+    )
   }
 }
 
