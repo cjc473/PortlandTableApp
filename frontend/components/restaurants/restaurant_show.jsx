@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewFormContainer from "../reviews/review_form_container";
 import { FiSearch } from 'react-icons/fi';
 import { FaUtensils } from 'react-icons/fa';
 import { BiHomeAlt } from 'react-icons/bi';
@@ -53,6 +54,9 @@ class RestaurantShow extends React.Component {
               </div>
               <p className="showpage-description">{restaurant.description}</p>
               <img src={restaurant.photo} />
+              <div className="review-form-placeholder-container">
+                <ReviewFormContainer restaurantId={restaurant.id}/>
+              </div>
             </div>
           </div>
 

@@ -27,7 +27,7 @@ class ReviewForm extends React.Component {
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit} className="review-form">
           <h2>Write your review</h2>
           <input type="text" 
             className="review-title"
@@ -42,12 +42,6 @@ class ReviewForm extends React.Component {
             value={this.state.body}
             placeholder="Body goes here" 
             />
-          <input type="text"
-            
-            value={this.state.title}
-            onChange={this.update("title")}
-            placeholder="Title"
-          />
         </form>
       </div>
     )
