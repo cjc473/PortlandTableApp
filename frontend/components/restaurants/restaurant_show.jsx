@@ -55,7 +55,8 @@ class RestaurantShow extends React.Component {
               <p className="showpage-description">{restaurant.description}</p>
               <img src={restaurant.photo} />
               <div className="review-form-placeholder-container">
-                <ReviewFormContainer restaurantId={restaurant.id}/>
+                Write a review!
+                {/* <ReviewFormContainer restaurantId={restaurant.id}/> */}
               </div>
             </div>
           </div>
