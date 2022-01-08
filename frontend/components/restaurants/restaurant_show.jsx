@@ -5,7 +5,7 @@ import { FaUtensils } from 'react-icons/fa';
 import { BiHomeAlt } from 'react-icons/bi';
 import { BsCashStack } from 'react-icons/bs';
 import CreateReservationContainer from "../reservations/create_reservation_container";
-
+import { openModal } from "../../actions/modal_actions";
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -55,8 +55,7 @@ class RestaurantShow extends React.Component {
               <p className="showpage-description">{restaurant.description}</p>
               <img src={restaurant.photo} />
               <div className="review-form-placeholder-container">
-                Write a review!
-                {/* <ReviewFormContainer restaurantId={restaurant.id}/> */}
+                <button id="write-review-button" onClick={() => openModal('review')}>Write a review!</button>
               </div>
             </div>
           </div>
