@@ -13,7 +13,6 @@ import ReservationConfirmationContainer from "./reservations/reservation_confirm
 import ProfileContainer from "./user/profile_container";
 import EditReservationContainer from "./reservations/edit_reservation_container";
 
-
 const App = () => (
   <div className="main">
     <ModalContainer />

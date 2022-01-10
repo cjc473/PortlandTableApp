@@ -10,7 +10,6 @@ import { openModal } from "../../actions/modal_actions";
 class RestaurantShow extends React.Component {
   constructor(props) {
     super(props);
-    // this.calculatePrice = this.calculatePrice.bind(this);
   }
 
   componentDidMount() {
@@ -55,7 +54,8 @@ class RestaurantShow extends React.Component {
               <p className="showpage-description">{restaurant.description}</p>
               <img src={restaurant.photo} />
               <div className="review-form-placeholder-container">
-                <button id="write-review-button" onClick={() => openModal('review')}>Write a review!</button>
+                <button onClick={() => openModal('review')}>Write a review!</button>
+                <ReviewFormContainer />
               </div>
             </div>
           </div>
