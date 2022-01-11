@@ -12,6 +12,7 @@ import RestaurantShowContainer from "./restaurants/restaurant_show_container";
 import ReservationConfirmationContainer from "./reservations/reservation_confirmation_container";
 import ProfileContainer from "./user/profile_container";
 import EditReservationContainer from "./reservations/edit_reservation_container";
+import ReviewFormContainer from "./reviews/review_form_container";
 
 const App = () => (
   <div className="main">
@@ -20,6 +21,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <Route path="/reviews/:restaurantId/:reservationId" component={ReviewFormContainer}/>
       <Route path="/reservations/:restaurantId/:reservationId/confirmation" component={ReservationConfirmationContainer} />
       <Route path="/reservations/:restaurantId/:reservationId/edit" component={EditReservationContainer} />
       <Route path="/restaurants/:restaurantId" component={RestaurantShowContainer} />

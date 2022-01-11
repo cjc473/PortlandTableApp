@@ -6,7 +6,11 @@ class ReviewForm extends React.Component {
     this.state = {
       title: "",
       body: "",
-      score: null,
+      overall: null,
+      food: null,
+      service: null,
+      ambience: null,
+      res_date: this.props.resDate,
       restaurant_id: this.props.restaurantId,
       author_id: this.props.userId
     }
@@ -25,8 +29,14 @@ class ReviewForm extends React.Component {
   }
 
   render() {
+    const {res_date, restaurant_id, author_id} = this.state
     return (
       <div>
+        <div>
+          {res_date}
+          {restaurant_id}
+          {author_id}
+        </div>
         <form onSubmit={this.handleSubmit} className="review-form">
           <h2>Write your review</h2>
           <input type="text" 

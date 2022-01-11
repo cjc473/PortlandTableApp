@@ -30,8 +30,7 @@ class ReservationCard extends React.Component {
     const { reservation, restaurant } = this.props;
     return (
       <div>
-        <Link></Link>
-        Write a review!
+        <Link to={`/reviews/${restaurant.id}/${reservation.id}`}>Write a review!</Link>
       </div>
     )
   }
