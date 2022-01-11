@@ -53,9 +53,8 @@ class RestaurantShow extends React.Component {
               </div>
               <p className="showpage-description">{restaurant.description}</p>
               <img src={restaurant.photo} />
-              <div className="review-form-placeholder-container">
-                <button onClick={() => openModal('review')}>Write a review!</button>
-                <ReviewFormContainer />
+              <div className="review-list">
+                What people are saying
               </div>
             </div>
           </div>

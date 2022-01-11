@@ -49,7 +49,7 @@ class Profile extends React.Component {
           <h2 className="profile-list-header">Upcoming Reservations</h2>
           <div className="user-reservations-list">
             <ul>
-              {future_res ? future_res.map(res => <ReservationCardContainer reservation={res} />) : "No upcoming res"}
+              {future_res ? future_res.map(res => <ReservationCardContainer reservation={res} upcoming={true} />) : "No upcoming res"}
             </ul>
           </div>
         </div>
@@ -57,7 +57,7 @@ class Profile extends React.Component {
           <h2 className="profile-list-header">Dining History</h2>
           <div className="user-reservations-list">
             <ul>
-              {past_res ? past_res.map(res => <ReservationCardContainer reservation={res} />) : "No upcoming res"}
+              {past_res ? past_res.map(res => <ReservationCardContainer reservation={res} upcoming={false} />) : "No upcoming res"}
             </ul>
           </div>
         </div>

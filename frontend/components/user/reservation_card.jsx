@@ -6,11 +6,6 @@ class ReservationCard extends React.Component {
   constructor(props) {
     super(props);
     this.handleDelete = this.handleDelete.bind(this);
-    // this.state = {
-    //   editFormOn: false
-    // }
-    // this.toggleEdit = this.toggleEdit.bind(this);
-    // this.editFormOn = false;
   }
 
   componentDidMount() {
@@ -21,14 +16,29 @@ class ReservationCard extends React.Component {
     this.props.deleteReservation(this.props.reservation);
   }
 
+  manageRes() {
+    const { reservation, restaurant } = this.props;
+    return (
+      <div className="reservation-card-button-container">
+        <Link to={`/reservations/${restaurant.id}/${reservation.id}/edit`}><button className="reservation-card-button">Modify</button></Link>
+        <button className="reservation-card-button" onClick={() => this.handleDelete()}>Cancel</button>
+      </div>
+    )
+  }
+
+  manageReview() {
+    const { reservation, restaurant } = this.props;
+    return (
+      <div>
+        <Link></Link>
+        Write a review!
+      </div>
+    )
+  }
+
   render() {
     if ((!this.props.restaurant) || (!this.props.reservation)) return null;
     const {reservation, restaurant} = this.props;
-    console.log("props below")
-    // console.log(this.props)
-    // const restaurant = this.props.restaurants[reservation.restaurant_id]
-    console.log(restaurant)
-    // console.log(restaurant.id)
     return (
       <div>
         <div className="reservation-card-container">
@@ -40,10 +50,7 @@ class ReservationCard extends React.Component {
               <p><BiCalendarAlt fontSize="24px" /> &nbsp;&nbsp;{reservation.date}</p>
               <p><BiUserCircle fontSize="24px" /> &nbsp;&nbsp;Table for {reservation.party_size}</p>
             </div>
-            <div className="reservation-card-button-container">
-              <Link to={`/reservations/${restaurant.id}/${reservation.id}/edit`}><button className="reservation-card-button">Modify</button></Link>
-              <button className="reservation-card-button" onClick={() => this.handleDelete()}>Cancel</button>
-            </div>
+            {this.props.upcoming ? this.manageRes() : this.manageReview()}
           </div>
         </div>
       </div>
