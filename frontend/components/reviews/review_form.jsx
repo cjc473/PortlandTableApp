@@ -10,9 +10,12 @@ class ReviewForm extends React.Component {
       food: null,
       service: null,
       ambience: null,
-      res_date: this.props.resDate,
-      restaurant_id: this.props.restaurantId,
-      author_id: this.props.userId
+      res_date: null,
+      restaurant_id: null,
+      author_id: null
+      // res_date: this.props.reservation.date,
+      // restaurant_id: this.props.restaurantId,
+      // author_id: this.props.userId
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.update = this.update.bind(this)
@@ -28,15 +31,19 @@ class ReviewForm extends React.Component {
     )
   }
 
+  componentDidMount() {
+    this.props.fetchReservation();
+    this.props.fetchRestaurant();
+  }
+
   render() {
-    const {res_date, restaurant_id, author_id} = this.state
+    if (!(this.props.reservation)) return null;
+    const {reservation, restaurantId, userId} = this.props
+    console.log(reservation.date)
+    console.log(restaurantId)
+    console.log(userId)
     return (
       <div>
-        <div>
-          {res_date}
-          {restaurant_id}
-          {author_id}
-        </div>
         <form onSubmit={this.handleSubmit} className="review-form">
           <h2>Write your review</h2>
           <input type="text" 
