@@ -4,15 +4,14 @@ class ReviewForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
       body: "",
       overall: null,
       food: null,
       service: null,
       ambience: null,
-      res_date: null,
-      restaurant_id: null,
-      author_id: null
+      // res_date: null,
+      // restaurant_id: null,
+      // author_id: null
       // res_date: this.props.reservation.date,
       // restaurant_id: this.props.restaurantId,
       // author_id: this.props.userId
@@ -42,16 +41,11 @@ class ReviewForm extends React.Component {
     console.log(reservation.date)
     console.log(restaurantId)
     console.log(userId)
+
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="review-form">
           <h2>Write your review</h2>
-          <input type="text" 
-            className="review-title"
-            value={this.state.title}
-            onChange={this.update("title")}
-            placeholder="Title goes here"
-            />
           <textarea name="" 
             cols="30" 
             rows="10"
