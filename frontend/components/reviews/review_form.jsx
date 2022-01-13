@@ -8,13 +8,7 @@ class ReviewForm extends React.Component {
       overall: null,
       food: null,
       service: null,
-      ambience: null,
-      // res_date: null,
-      // restaurant_id: null,
-      // author_id: null
-      // res_date: this.props.reservation.date,
-      // restaurant_id: this.props.restaurantId,
-      // author_id: this.props.userId
+      ambience: null
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.update = this.update.bind(this)
@@ -22,6 +16,16 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const review = {
+      body: this.state.body,
+      overall: this.state.overall,
+      food: this.state.food,
+      service: this.state.service,
+      ambience: this.state.ambience,
+      res_date: this.props.reservation.date,
+      restaurant_id: this.props.restaurantId,
+      author_id: this.props.userId
+    }
   }
 
   update(field) {
@@ -45,14 +49,79 @@ class ReviewForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="review-form">
-          <h2>Write your review</h2>
-          <textarea name="" 
-            cols="30" 
-            rows="10"
-            className="review-body"
-            value={this.state.body}
-            placeholder="Body goes here" 
+          <div className="review-ratings-container">
+            <div className="rating-row" id="overall-row">
+              <input type="radio" name="overall" id="overall-1" value="1" onChange={this.update("overall")} />
+              <label htmlFor="overall-1">★</label>
+              <input type="radio" name="overall" id="overall-2" value="2" onChange={this.update("overall")} />
+              <label htmlFor="overall-2">★</label>
+              <input type="radio" name="overall" id="overall-3" value="3" onChange={this.update("overall")} />
+              <label htmlFor="overall-3">★</label>
+              <input type="radio" name="overall" id="overall-4" value="4" onChange={this.update("overall")} />
+              <label htmlFor="overall-4">★</label>
+              <input type="radio" name="overall" id="overall-5" value="5" onChange={this.update("overall")} />
+              <label htmlFor="overall-5">★</label>
+            </div>
+            <div className="rating-row" id="food-row">
+              <input type="radio" name="food" id="food-1" value="1" onChange={this.update("food")} />
+              <label htmlFor="food-1">★</label>
+              <input type="radio" name="food" id="food-2" value="2" onChange={this.update("food")} />
+              <label htmlFor="food-2">★</label>
+              <input type="radio" name="food" id="food-3" value="3" onChange={this.update("food")} />
+              <label htmlFor="food-3">★</label>
+              <input type="radio" name="food" id="food-4" value="4" onChange={this.update("food")} />
+              <label htmlFor="food-4">★</label>
+              <input type="radio" name="food" id="food-5" value="5" onChange={this.update("food")} />
+              <label htmlFor="food-5">★</label>
+            </div>
+            <div className="rating-row" id="food-row">
+              <input type="radio" name="food" id="food-1" value="1" onChange={this.update("food")} />
+              <label htmlFor="food-1">★</label>
+              <input type="radio" name="food" id="food-2" value="2" onChange={this.update("food")} />
+              <label htmlFor="food-2">★</label>
+              <input type="radio" name="food" id="food-3" value="3" onChange={this.update("food")} />
+              <label htmlFor="food-3">★</label>
+              <input type="radio" name="food" id="food-4" value="4" onChange={this.update("food")} />
+              <label htmlFor="food-4">★</label>
+              <input type="radio" name="food" id="food-5" value="5" onChange={this.update("food")} />
+              <label htmlFor="food-5">★</label>
+            </div>
+            <div className="rating-row" id="service-row">
+              <input type="radio" name="service" id="service-1" value="1" onChange={this.update("service")} />
+              <label htmlFor="service-1">★</label>
+              <input type="radio" name="service" id="service-2" value="2" onChange={this.update("service")} />
+              <label htmlFor="service-2">★</label>
+              <input type="radio" name="service" id="service-3" value="3" onChange={this.update("service")} />
+              <label htmlFor="service-3">★</label>
+              <input type="radio" name="service" id="service-4" value="4" onChange={this.update("service")} />
+              <label htmlFor="service-4">★</label>
+              <input type="radio" name="service" id="service-5" value="5" onChange={this.update("service")} />
+              <label htmlFor="service-5">★</label>
+            </div>
+            <div className="rating-row" id="ambience-row">
+              <input type="radio" name="ambience" id="ambience-1" value="1" onChange={this.update("ambience")} />
+              <label htmlFor="ambience-1">★</label>
+              <input type="radio" name="ambience" id="ambience-2" value="2" onChange={this.update("ambience")} />
+              <label htmlFor="ambience-2">★</label>
+              <input type="radio" name="ambience" id="ambience-3" value="3" onChange={this.update("ambience")} />
+              <label htmlFor="ambience-3">★</label>
+              <input type="radio" name="ambience" id="ambience-4" value="4" onChange={this.update("ambience")} />
+              <label htmlFor="ambience-4">★</label>
+              <input type="radio" name="ambience" id="ambience-5" value="5" onChange={this.update("ambience")} />
+              <label htmlFor="ambience-5">★</label>
+            </div>
+          </div>
+          <div className="review-body-container">
+            <h2>Write your review</h2>
+            <textarea name=""
+              cols="30"
+              rows="10"
+              className="review-body"
+              value={this.state.body}
+              placeholder="Body goes here"
             />
+          </div>
+
         </form>
       </div>
     )
