@@ -105,7 +105,6 @@ class ReservationForm extends React.Component {
               value="Let's go"
               className="create-reservation-submit"
             />
-            {/* <Link to={{pathname: "/reservations/new", state: {}}} className="create-reservation-submit">Let's go</Link> */}
           </div>
         </div>
       </form>

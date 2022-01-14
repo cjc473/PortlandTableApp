@@ -26,7 +26,18 @@ class ReviewForm extends React.Component {
       restaurant_id: this.props.restaurantId,
       author_id: this.props.userId
     }
-    this.props.createReview(review);
+    this.props.createReview(review).then(response => {
+      this.props.history.push('/profile')
+    })
+
+    // if (this.props.formType === "Edit Reservation") {
+    //   this.props.action(this.state);
+    //   this.props.history.push(`/profile`);
+    // } else {
+    //   this.props.action(this.state).then(response => {
+    //     this.props.history.push(`/reservations/${this.state.restaurant_id}/${response.reservation.id}/confirmation`)
+    //   })
+    // }
   }
 
   update(field) {
@@ -116,6 +127,12 @@ class ReviewForm extends React.Component {
               className="review-body"
               value={this.state.body}
               placeholder="Body goes here"
+            />
+          </div>
+          <div className="review-submit-container">
+            <input type="submit"
+              value="Submit your review"
+              className="create-reservation-submit"
             />
           </div>
         </form>
