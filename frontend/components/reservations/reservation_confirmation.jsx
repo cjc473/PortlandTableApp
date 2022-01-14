@@ -14,10 +14,6 @@ class ReservationConfirmation extends React.Component {
   
   }
 
-  // myReservation() {
-  //   this.props.fetchReservations
-  // }
-
   componentDidMount() {
     this.props.fetchReservation();
     this.props.fetchRestaurant(this.props.restaurantId);
@@ -26,17 +22,13 @@ class ReservationConfirmation extends React.Component {
 
   render() {
     if (!this.props.reservation) return null;
-    // const {reservation} = this.props
     const { reservation } = this.props
-    // console.log('begin here')
-    // console.log(this.props)
     return (
       <div className="card-background"> 
         <div className="confirmation-page-container">
           <div className="confirmation-container">
             <h2 id="confirmation-message"><BsCheckCircleFill color="green" /> Reservation confirmed</h2>
             <RestaurantCardContainer restaurantId={this.props.restaurantId} />
-            {/* <h2>{restaurant.name}</h2> */}
             <div className="confirm-card-details">
               <h2><BiTimeFive font-size="24px" /> &nbsp;&nbsp; {reservation.time}</h2>
               <h2><BiCalendarAlt font-size="24px" /> &nbsp;&nbsp; {reservation.date}</h2>

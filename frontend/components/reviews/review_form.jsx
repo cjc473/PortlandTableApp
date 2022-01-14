@@ -26,6 +26,7 @@ class ReviewForm extends React.Component {
       restaurant_id: this.props.restaurantId,
       author_id: this.props.userId
     }
+    this.props.createReview(review);
   }
 
   update(field) {
@@ -42,10 +43,6 @@ class ReviewForm extends React.Component {
   render() {
     if (!(this.props.reservation)) return null;
     const {reservation, restaurantId, userId} = this.props
-    console.log(reservation.date)
-    console.log(restaurantId)
-    console.log(userId)
-
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="review-form">
@@ -121,7 +118,6 @@ class ReviewForm extends React.Component {
               placeholder="Body goes here"
             />
           </div>
-
         </form>
       </div>
     )

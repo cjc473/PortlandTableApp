@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import ReviewForm from "./review_form";
 import { fetchReservation } from "../../actions/reservation_actions";
 import { fetchRestaurant } from "../../actions/restaurant_actions";
+import { createReview } from "../../actions/review_actions";
 
 
 const mSTP = (state, ownProps) => ({
@@ -12,7 +13,8 @@ const mSTP = (state, ownProps) => ({
 
 const mDTP = (dispatch, ownProps) => ({
   fetchReservation: () => dispatch(fetchReservation(ownProps.match.params.reservationId)),
-  fetchRestaurant: () => dispatch(fetchRestaurant(ownProps.match.params.restaurantId))
+  fetchRestaurant: () => dispatch(fetchRestaurant(ownProps.match.params.restaurantId)),
+  createReview: (review) => dispatch(createReview(review))
 })
 
 export default connect(mSTP, mDTP)(ReviewForm)
