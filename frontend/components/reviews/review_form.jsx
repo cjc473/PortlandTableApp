@@ -30,14 +30,6 @@ class ReviewForm extends React.Component {
       this.props.history.push('/profile')
     })
 
-    // if (this.props.formType === "Edit Reservation") {
-    //   this.props.action(this.state);
-    //   this.props.history.push(`/profile`);
-    // } else {
-    //   this.props.action(this.state).then(response => {
-    //     this.props.history.push(`/reservations/${this.state.restaurant_id}/${response.reservation.id}/confirmation`)
-    //   })
-    // }
   }
 
   update(field) {
