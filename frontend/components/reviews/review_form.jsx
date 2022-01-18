@@ -26,6 +26,7 @@ class ReviewForm extends React.Component {
       restaurant_id: this.props.restaurantId,
       author_id: this.props.userId
     }
+    console.log(review)
     this.props.createReview(review).then(response => {
       this.props.history.push('/profile')
     })
@@ -51,6 +52,7 @@ class ReviewForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="review-form">
           <div className="review-ratings-container">
             <div className="rating-row" id="overall-row">
+              Overall
               <input type="radio" name="overall" id="overall-1" value="1" onChange={this.update("overall")} />
               <label htmlFor="overall-1">★</label>
               <input type="radio" name="overall" id="overall-2" value="2" onChange={this.update("overall")} />
@@ -63,18 +65,7 @@ class ReviewForm extends React.Component {
               <label htmlFor="overall-5">★</label>
             </div>
             <div className="rating-row" id="food-row">
-              <input type="radio" name="food" id="food-1" value="1" onChange={this.update("food")} />
-              <label htmlFor="food-1">★</label>
-              <input type="radio" name="food" id="food-2" value="2" onChange={this.update("food")} />
-              <label htmlFor="food-2">★</label>
-              <input type="radio" name="food" id="food-3" value="3" onChange={this.update("food")} />
-              <label htmlFor="food-3">★</label>
-              <input type="radio" name="food" id="food-4" value="4" onChange={this.update("food")} />
-              <label htmlFor="food-4">★</label>
-              <input type="radio" name="food" id="food-5" value="5" onChange={this.update("food")} />
-              <label htmlFor="food-5">★</label>
-            </div>
-            <div className="rating-row" id="food-row">
+              Food
               <input type="radio" name="food" id="food-1" value="1" onChange={this.update("food")} />
               <label htmlFor="food-1">★</label>
               <input type="radio" name="food" id="food-2" value="2" onChange={this.update("food")} />
@@ -87,6 +78,7 @@ class ReviewForm extends React.Component {
               <label htmlFor="food-5">★</label>
             </div>
             <div className="rating-row" id="service-row">
+              Service
               <input type="radio" name="service" id="service-1" value="1" onChange={this.update("service")} />
               <label htmlFor="service-1">★</label>
               <input type="radio" name="service" id="service-2" value="2" onChange={this.update("service")} />
@@ -99,6 +91,7 @@ class ReviewForm extends React.Component {
               <label htmlFor="service-5">★</label>
             </div>
             <div className="rating-row" id="ambience-row">
+              Ambience
               <input type="radio" name="ambience" id="ambience-1" value="1" onChange={this.update("ambience")} />
               <label htmlFor="ambience-1">★</label>
               <input type="radio" name="ambience" id="ambience-2" value="2" onChange={this.update("ambience")} />
@@ -117,8 +110,8 @@ class ReviewForm extends React.Component {
               cols="30"
               rows="10"
               className="review-body"
-              value={this.state.body}
               placeholder="Body goes here"
+              onChange={this.update("body")}
             />
           </div>
           <div className="review-submit-container">

@@ -6,7 +6,7 @@ import { createReview } from "../../actions/review_actions";
 
 
 const mSTP = (state, ownProps) => ({
-  userId: state.entities.users[state.session.id],
+  userId: state.entities.users[state.session.id].id,
   restaurantId: ownProps.match.params.restaurantId,
   reservation: state.entities.reservations[ownProps.match.params.reservationId]
 })
