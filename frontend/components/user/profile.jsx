@@ -11,6 +11,7 @@ class Profile extends React.Component {
   componentDidMount() {
     this.props.fetchUserReservations(this.props.currentUser.id);
     this.props.fetchRestaurants();
+    this.props.fetchUserReviews(this.props.currentUser.id);
   }
 
   isPastDate(date) {
@@ -32,6 +33,7 @@ class Profile extends React.Component {
   }
 
   render() {
+    console.log(this.props.reviews)
     if (!this.props.currentUser) return null;
     const { reservations } = this.props;
     let past_res

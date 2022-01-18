@@ -1,14 +1,14 @@
 export const fetchRestaurantReviews = (restaurantId) => (
   $.ajax({
     method: "GET",
-    url: `api/restaurants/${restaurantId}/reviews`
+    url: `/api/restaurants/${restaurantId}/reviews`
   })
 )
 
 export const fetchUserReviews = (userId) => (
   $.ajax({
     method: "GET",
-    url: `api/users/${userId}/reviews`
+    url: `/api/users/${userId}/reviews`
   })
 )
 
