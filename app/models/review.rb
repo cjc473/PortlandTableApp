@@ -18,6 +18,8 @@ class Review < ApplicationRecord
 
   validates :body, :restaurant_id, :overall, :food, :service, :ambience, :res_date, :author_id, presence: true
 
+  validates :restaurant_id, uniqueness: { scope: :author_id }
+
   belongs_to :restaurant
 
   belongs_to :author,
