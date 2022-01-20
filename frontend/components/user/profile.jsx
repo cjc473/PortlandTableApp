@@ -33,7 +33,6 @@ class Profile extends React.Component {
   }
 
   render() {
-    console.log(this.props.reviews)
     if (!this.props.currentUser) return null;
     const { reservations } = this.props;
     let past_res
