@@ -4,7 +4,7 @@ class Api::ReviewsController < ApplicationController
     if params[:restaurant_id]
       @reviews = Review.where({restaurant_id: params[:restaurant_id]})
     elsif params[:user_id] 
-      @reviews = Review.where({user_id: params[:user_id]})
+      @reviews = Review.where({author_id: params[:user_id]})
     end
     render :index
   end
