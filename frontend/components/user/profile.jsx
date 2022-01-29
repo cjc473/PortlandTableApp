@@ -32,6 +32,17 @@ class Profile extends React.Component {
     return filter === "past" ? past_res : future_res
   }
 
+  hasReviewed() {
+    const reservationIds = []
+    const { reviews } = this.props
+    
+  }
+
+  //iterate through the reviews once.
+  //collect all the reservation IDs
+  //if reservation id is in collection, do edit/delete review
+  // if reservation id in not in collect, do new review
+
   render() {
     if (!this.props.currentUser) return null;
     const { reservations } = this.props;
