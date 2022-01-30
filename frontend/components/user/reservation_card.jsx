@@ -27,10 +27,11 @@ class ReservationCard extends React.Component {
   }
 
   manageReview() {
-    const { reservation, restaurant } = this.props;
+    const { reservation, restaurant, review } = this.props;
+    console.log(review)
     return (
       <div>
-        <Link to={`/reviews/${restaurant.id}/${reservation.id}`}>Write a review!</Link>
+        {review === false ? <Link to={`/reviews/${restaurant.id}/${reservation.id}`}>Write a review!</Link> : <Link to={`/reviews/${restaurant.id}/${reservation.id}`}>Edit Review</Link>}
       </div>
     )
   }
