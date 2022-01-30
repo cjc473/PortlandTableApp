@@ -33,15 +33,21 @@ class Profile extends React.Component {
   }
 
   hasReviewed() {
-    const reservationIds = []
+    const restaurantIds = {}
     const { reviews } = this.props
-    
+    reviews.forEach(review => {
+      restaurantIds[review.restaurant_id] = review.id 
+    }) 
+    return restaurantIds
   }
 
-  //iterate through the reviews once.
-  //collect all the reservation IDs
-  //if reservation id is in collection, do edit/delete review
-  // if reservation id in not in collect, do new review
+  //have list of restaurant ids with review ids
+  //have an array of past reservations
+  // if reservation.restaurant_id is key in restaurantIds:
+    //show edit/delete reservation link
+    //pass existing review as prop
+  // else have link to write new review
+  // reviewedRestaurants[reservation.restaurant_id] ? reviewsObject[reviewedRestaurants[reservation.restaurant_id]] : false
 
   render() {
     if (!this.props.currentUser) return null;
@@ -52,6 +58,7 @@ class Profile extends React.Component {
       past_res = this.sortReservations("past", reservations)
       future_res = this.sortReservations("future", reservations)
     }
+    const reviewedRestaurants = this.hasReviewed();
     return (
       <div className="profile-page-container">
         <div className="user-welcome">
@@ -61,7 +68,7 @@ class Profile extends React.Component {
           <h2 className="profile-list-header">Upcoming Reservations</h2>
           <div className="user-reservations-list">
             <ul>
-              {future_res ? future_res.map(res => <ReservationCardContainer reservation={res} upcoming={true} />) : "No upcoming res"}
+              {future_res ? future_res.map(res => <ReservationCardContainer reservation={res} upcoming={true} />) : "No Upcoming Reservations"}
             </ul>
           </div>
         </div>
@@ -69,7 +76,7 @@ class Profile extends React.Component {
           <h2 className="profile-list-header">Dining History</h2>
           <div className="user-reservations-list">
             <ul>
-              {past_res ? past_res.map(res => <ReservationCardContainer reservation={res} upcoming={false} />) : "No upcoming res"}
+              {past_res ? past_res.map(res => <ReservationCardContainer reservation={res} upcoming={false} review={reviewedRestaurants[res.restaurant_id] ? this.props.reviewsObject[reviewedRestaurants[res.restaurant_id]] : false} />) : ""}
             </ul>
           </div>
         </div>

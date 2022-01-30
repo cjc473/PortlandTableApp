@@ -7,7 +7,8 @@ import { fetchUserReviews } from "../../actions/review_actions";
 const mSTP = state => ({
   currentUser: state.entities.users[state.session.id],
   reservations: Object.values(state.entities.reservations),
-  reviews: Object.values(state.entities.reviews)
+  reviews: Object.values(state.entities.reviews),
+  reviewsObject: state.entities.reviews
 })
 
 const mDTP = dispatch => ({
