@@ -40,8 +40,9 @@ class EditReview extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchReservation();
+    // this.props.fetchReservation();
     this.props.fetchRestaurant();
+    this.props.fetchReview();
   }
 
   render() {
