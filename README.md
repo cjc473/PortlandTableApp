@@ -25,18 +25,6 @@ Logged-in users can create reservations for each restaurant. Additionally, they 
 ![User Profile](./app/assets/images/user_prof.png)
 
 
-  
-* Upcoming Features
-  
-Reviews
-
-Users can view, create, edit, and delete reviews for restaurants.
-
-  
-User Profile
-  
-Users will have a more detailed profile that includes their past reviews, past reservations, and allows them to modify their profile information.
-
 
 * Technologies Used
   
